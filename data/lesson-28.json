@@ -1,0 +1,393 @@
+{
+  "lesson": "Lesson 28",
+  "items": [
+    {
+      "title": "～ながら",
+      "meaning": "একই সাথে দুটি কাজ করা (একটি কাজ করতে করতে আরেকটি কাজ করা)",
+      "conjugation": {
+        "verb": "Masu-stem + ながら (いきます→いき+ながら, のみます→のみ+ながら, します→し+ながら)"
+      },
+      "examples": [
+        {
+          "jpFuri": [
+            {
+              "kanji": "音楽を",
+              "furigana": "おんがくを"
+            },
+            {
+              "kanji": "聴",
+              "furigana": "き",
+              "rest": "きながら",
+              "highlight": true
+            },
+            {
+              "kanji": "勉強します",
+              "furigana": "べんきょうします"
+            }
+          ],
+          "bn": "গান [[শুনতে শুনতে]] পড়াশোনা করি।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "テレビを",
+              "furigana": ""
+            },
+            {
+              "kanji": "見",
+              "furigana": "み",
+              "rest": "ながら",
+              "highlight": true
+            },
+            {
+              "kanji": "ごはんを",
+              "furigana": ""
+            },
+            {
+              "kanji": "食べます",
+              "furigana": "たべます"
+            }
+          ],
+          "bn": "টিভি [[দেখতে দেখতে]] খাবার খাই।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "歩",
+              "furigana": "ある",
+              "rest": "きながら",
+              "highlight": true
+            },
+            {
+              "kanji": "電話を",
+              "furigana": "でんわを"
+            },
+            {
+              "kanji": "します",
+              "furigana": ""
+            }
+          ],
+          "bn": "[[হাঁটতে হাঁটতে]] ফোন করি।"
+        }
+      ],
+      "effect": "～ながら — একই সাথে দুটি কাজ একসাথে করার জন্য ব্যবহৃত হয়। প্রথম কাজটি Masu-stem + ながら হয়।"
+    },
+    {
+      "title": "～て います",
+      "meaning": "অভ্যাস বা রুটিন প্রকাশ করা",
+      "note": "～ています এর অনেক ব্যবহার আছে, এখানে অভ্যাস বা রুটিন বোঝানোর ব্যবহার শেখানো হয়েছে",
+      "examples": [
+        {
+          "jpFuri": [
+            {
+              "kanji": "まいあさ",
+              "furigana": ""
+            },
+            {
+              "kanji": "ジョギングを",
+              "furigana": ""
+            },
+            {
+              "kanji": "して",
+              "furigana": ""
+            },
+            {
+              "kanji": "います",
+              "furigana": "",
+              "highlight": true
+            }
+          ],
+          "bn": "প্রতি সকালে [[জগিং করি]]।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "やすみの日は",
+              "furigana": ""
+            },
+            {
+              "kanji": "絵を",
+              "furigana": "えを"
+            },
+            {
+              "kanji": "かいて",
+              "furigana": ""
+            },
+            {
+              "kanji": "います",
+              "furigana": "",
+              "highlight": true
+            }
+          ],
+          "bn": "ছুটির দিন [[ছবি অঙ্কন করি]]।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "日曜日は",
+              "furigana": "にちようびは"
+            },
+            {
+              "kanji": "いつも",
+              "furigana": ""
+            },
+            {
+              "kanji": "ごはんを",
+              "furigana": ""
+            },
+            {
+              "kanji": "つくって",
+              "furigana": ""
+            },
+            {
+              "kanji": "います",
+              "furigana": "",
+              "highlight": true
+            }
+          ],
+          "bn": "রবিবারে [[সবসময় রান্না করি]]।"
+        }
+      ],
+      "effect": "～て います — N4 তে অভ্যাস বা রুটিন প্রকাশ করতে ব্যবহৃত হয়। て-form + います দিয়ে গঠন করা হয়।"
+    },
+    {
+      "title": "～し、～ し",
+      "meaning": "একাধিক কারণ, বৈশিষ্ট্য বা সুবিধা একসাথে উল্লেখ করা",
+      "note": "একাধিক কারণ বা বৈশিষ্ট্য একসাথে বলতে ব্যবহৃত হয়",
+      "examples": [
+        {
+          "jpFuri": [
+            {
+              "kanji": "にほんごが",
+              "furigana": ""
+            },
+            {
+              "kanji": "はなせるし",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "、",
+              "furigana": ""
+            },
+            {
+              "kanji": "かけるし",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "、",
+              "furigana": ""
+            },
+            {
+              "kanji": "よめます",
+              "furigana": ""
+            }
+          ],
+          "bn": "জাপানি ভাষা [[বলতে পারি]], [[লিখতেও পারি]], পড়তেও পারি।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "サトウさんは",
+              "furigana": ""
+            },
+            {
+              "kanji": "ダンスも",
+              "furigana": ""
+            },
+            {
+              "kanji": "できるし",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "、",
+              "furigana": ""
+            },
+            {
+              "kanji": "ピアノも",
+              "furigana": ""
+            },
+            {
+              "kanji": "ひけるし",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "、",
+              "furigana": ""
+            },
+            {
+              "kanji": "うたも",
+              "furigana": ""
+            },
+            {
+              "kanji": "うたえます",
+              "furigana": ""
+            }
+          ],
+          "bn": "সাতো সান [[ডান্সও পারেন]], [[পিয়ানোও বাজাতে পারেন]], গানও গাইতে পারেন।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "この",
+              "furigana": ""
+            },
+            {
+              "kanji": "みせは",
+              "furigana": ""
+            },
+            {
+              "kanji": "おすしも",
+              "furigana": ""
+            },
+            {
+              "kanji": "おいしいし",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "、",
+              "furigana": ""
+            },
+            {
+              "kanji": "ねだんも",
+              "furigana": ""
+            },
+            {
+              "kanji": "やすいし",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "、",
+              "furigana": ""
+            },
+            {
+              "kanji": "にんきが",
+              "furigana": ""
+            },
+            {
+              "kanji": "あります",
+              "furigana": ""
+            }
+          ],
+          "bn": "এই দোকানে [[সুশি সুস্বাদু]], [[দামও কম]], আবার জনপ্রিয়ও।"
+        }
+      ],
+      "effect": "～し、～し — একাধিক কারণ, বৈশিষ্ট্য বা সুবিধা একসাথে তালিকাভুক্ত করতে ব্যবহৃত হয়।"
+    },
+    {
+      "title": "それで",
+      "meaning": "সেই জন্য / তাই (Therefore / That's why)",
+      "note": "প্রথম বাক্যে কারণ বলা হয়, তারপর দ্বিতীয় বাক্যের শুরুতে それで বসিয়ে ফলাফল বলা হয়",
+      "examples": [
+        {
+          "jpFuri": [
+            {
+              "kanji": "にほんへ",
+              "furigana": ""
+            },
+            {
+              "kanji": "いきたいです",
+              "furigana": ""
+            },
+            {
+              "kanji": "。",
+              "furigana": ""
+            },
+            {
+              "kanji": "それで",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "、",
+              "furigana": ""
+            },
+            {
+              "kanji": "にほんごを",
+              "furigana": ""
+            },
+            {
+              "kanji": "べんきょうして",
+              "furigana": ""
+            },
+            {
+              "kanji": "います",
+              "furigana": ""
+            }
+          ],
+          "bn": "জাপানে যেতে চাই। [[সেই জন্য]] জাপানি ভাষা পড়ছি।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "きのう",
+              "furigana": ""
+            },
+            {
+              "kanji": "いそがしかったです",
+              "furigana": ""
+            },
+            {
+              "kanji": "。",
+              "furigana": ""
+            },
+            {
+              "kanji": "それで",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "、",
+              "furigana": ""
+            },
+            {
+              "kanji": "べんきょうできませんでした",
+              "furigana": ""
+            }
+          ],
+          "bn": "গতকাল ব্যস্ত ছিলাম। [[সেই জন্য]] পড়াশোনা করতে পারিনি।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "あめが",
+              "furigana": ""
+            },
+            {
+              "kanji": "ふっています",
+              "furigana": ""
+            },
+            {
+              "kanji": "。",
+              "furigana": ""
+            },
+            {
+              "kanji": "それで",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "、",
+              "furigana": ""
+            },
+            {
+              "kanji": "かさを",
+              "furigana": ""
+            },
+            {
+              "kanji": "もちました",
+              "furigana": ""
+            }
+          ],
+          "bn": "বৃষ্টি হচ্ছে। [[সেই জন্য]] ছাতা নিয়ে এসেছি।"
+        }
+      ],
+      "effect": "それで — কারণ ও ফলাফলের সম্পর্ক দেখায়। কারণের বাক্য শেষ হওয়ার পরে ফলাফলের বাক্যের শুরুতে ব্যবহৃত হয়।"
+    }
+  ]
+}

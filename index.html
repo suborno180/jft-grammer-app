@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>JLPT N4 · Grammar Notebook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { inter: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .notebook-lines {
+      background-image: repeating-linear-gradient(transparent, transparent 30px, rgba(200,190,175,0.35) 30px, rgba(200,190,175,0.35) 31px);
+      background-size: 100% 31px; background-position: 0 38px;
+    }
+    .dark .notebook-lines {
+      background-image: repeating-linear-gradient(transparent, transparent 30px, rgba(80,70,60,0.3) 30px, rgba(80,70,60,0.3) 31px);
+    }
+    .punch-hole { position: absolute; left: 14px; width: 9px; height: 9px; border-radius: 50%; z-index: 5; }
+    .fade-in { animation: fadeUp 0.25s ease forwards; }
+    @keyframes fadeUp { 0% { opacity:0.3; transform:translateY(6px); } 100% { opacity:1; transform:translateY(0); } }
+    .furigana-text { font-size: 0.5rem; line-height: 1; }
+    .dark .furigana-text { color: #a8998a; }
+    .loading-spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid #d6cdc0; border-top-color: #6b4f2a; border-radius: 50%; animation: spin 0.6s linear infinite; }
+    .dark .loading-spinner { border-color: #52525b; border-top-color: #fbbf24; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes flashFocus {
+      0% { box-shadow: 0 0 0 0 rgba(251,191,36,0.7); background-color: rgba(251,191,36,0.15); }
+      50% { box-shadow: 0 0 20px 4px rgba(251,191,36,0.5); background-color: rgba(251,191,36,0.25); }
+      100% { box-shadow: 0 0 0 0 rgba(251,191,36,0); background-color: transparent; }
+    }
+    .grammar-focus-flash { animation: flashFocus 1.5s ease-out; border-radius: 12px; }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center p-4 transition-colors duration-300 bg-[#d6d0c8] dark:bg-[#1a1a1f]">
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle"
+    class="fixed top-4 right-4 z-50 w-11 h-11 rounded-full flex items-center justify-center bg-white/80 dark:bg-zinc-800/80 border border-[#c5b9aa] dark:border-zinc-600 shadow-md backdrop-blur-md hover:scale-105 transition-all duration-200 cursor-pointer"
+    title="Toggle Dark/Light Mode">
+    <span id="themeIcon" class="text-xl select-none">☀️</span>
+  </button>
+
+  <!-- Sidebar Toggle Button (Mobile) -->
+  <button id="sidebarToggle"
+    class="fixed top-4 left-4 z-50 w-11 h-11 rounded-full flex items-center justify-center bg-white/80 dark:bg-zinc-800/80 border border-[#c5b9aa] dark:border-zinc-600 shadow-md backdrop-blur-md hover:scale-105 transition-all duration-200 cursor-pointer md:hidden"
+    title="Grammar Rules List">
+    <span class="text-xl select-none">☰</span>
+  </button>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed top-0 left-0 h-full w-72 bg-[#fcf8f2] dark:bg-[#24242a] border-r border-[#e8e0d6] dark:border-zinc-700 shadow-lg z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto">
+    <div class="p-4">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-bold text-[#1f1913] dark:text-gray-100 flex items-center gap-2">
+          <span>📋</span> Grammar Rules
+        </h2>
+        <button id="sidebarClose" class="md:hidden w-8 h-8 rounded-full flex items-center justify-center bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border border-[#d0c5b6] dark:border-zinc-600 text-[#4d4035] dark:text-zinc-300 hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 cursor-pointer">
+          ✕
+        </button>
+      </div>
+      <div id="sidebarContent" class="space-y-3"></div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (Mobile) -->
+  <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
+
+  <div id="app" class="app-container relative max-w-[820px] w-full rounded-none p-7 sm:p-8 notebook-lines bg-[#fcf8f2] dark:bg-[#24242a] shadow-[0_8px_32px_rgba(0,0,0,0.12),0_1px_4px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5),0_1px_4px_rgba(0,0,0,0.3)] border border-[#e8e0d6] dark:border-zinc-700 transition-colors duration-300 md:ml-72">
+
+    <div class="punch-hole top-[15%] hidden md:block bg-[#fcf8f2] dark:bg-[#24242a] border-2 border-[#c5b9aa] dark:border-zinc-600 shadow-inner"></div>
+    <div class="punch-hole top-1/2 -translate-y-1/2 hidden md:block bg-[#fcf8f2] dark:bg-[#24242a] border-2 border-[#c5b9aa] dark:border-zinc-600 shadow-inner"></div>
+    <div class="punch-hole bottom-[15%] hidden md:block bg-[#fcf8f2] dark:bg-[#24242a] border-2 border-[#c5b9aa] dark:border-zinc-600 shadow-inner"></div>
+
+    <div class="relative z-10 bg-white/75 dark:bg-zinc-900/70 backdrop-blur-[3px] rounded-xl px-3 sm:px-5 py-3 sm:py-4 transition-colors duration-300">
+
+      <header class="flex justify-between items-start flex-wrap gap-2 mb-1">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-[#1f1913] dark:text-gray-100 flex items-center gap-2">
+            <span>📘</span> JLPT N4
+          </h1>
+          <div class="text-[0.7rem] font-medium text-[#6b5f52] dark:text-zinc-400 mt-0.5 border-l-2 border-[#b7a48b] dark:border-zinc-500 pl-3 bg-[rgba(243,238,232,0.5)] dark:bg-zinc-800/50 rounded-r-md inline-block px-3 py-0.5">
+            ✦ ফুরিগানা · নোটবুক
+          </div>
+        </div>
+      </header>
+
+      <div id="lessonTabs" class="flex flex-wrap items-center gap-2 mb-4 border-b border-dashed border-[#d6cdc0] dark:border-zinc-600 pb-3"></div>
+
+      <div id="grammarCard" class="fade-in rounded-none">
+        <div id="grammarItemsContainer">
+          <div class="flex items-center justify-center gap-3 py-10 text-[#6b5f52] dark:text-zinc-400 font-medium">
+            <span class="loading-spinner"></span>
+            <span>লোড হচ্ছে...</span>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-5 gap-3 flex-wrap border-t border-dashed border-[#d6cdc0] dark:border-zinc-600 pt-4">
+          <button id="prevBtn" class="px-5 py-1.5 rounded-full font-semibold text-sm text-[#3d3328] dark:text-zinc-200 bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border border-[#d0c5b6] dark:border-zinc-600 backdrop-blur-[2px] hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 hover:border-[#b09f8e] active:scale-95 transition-all duration-150 cursor-pointer">
+            ← আগের
+          </button>
+          <span class="font-medium text-xs px-4 py-1 rounded-full text-[#3d3328] dark:text-zinc-300 bg-[rgba(237,231,223,0.6)] dark:bg-zinc-700/60 border border-[#d6cdc0] dark:border-zinc-600 backdrop-blur-[2px]" id="counterDisplay">0 / 0</span>
+          <button id="nextBtn" class="px-5 py-1.5 rounded-full font-semibold text-sm text-[#3d3328] dark:text-zinc-200 bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border border-[#d0c5b6] dark:border-zinc-600 backdrop-blur-[2px] hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 hover:border-[#b09f8e] active:scale-95 transition-all duration-150 cursor-pointer">
+            পরবর্তী →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Theme Toggle Script (Sync - runs immediately) -->
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var themeToggle = document.getElementById('themeToggle');
+      var themeIcon = document.getElementById('themeIcon');
+      var savedTheme = localStorage.getItem('jft-theme');
+      if (savedTheme === 'dark') { html.classList.add('dark'); themeIcon.textContent = '🌙'; }
+      else { html.classList.remove('dark'); themeIcon.textContent = '☀️'; }
+      themeToggle.addEventListener('click', function () {
+        html.classList.toggle('dark');
+        var isDark = html.classList.contains('dark');
+        themeIcon.textContent = isDark ? '🌙' : '☀️';
+        localStorage.setItem('jft-theme', isDark ? 'dark' : 'light');
+      });
+    })();
+  </script>
+
+  <!-- Grammar App Script (Async - loads JSON files) -->
+  <script>
+    (function () {
+
+      var BASE_URL = '';
+      var DATA_DIR = 'data';
+      var MANIFEST_PATH = DATA_DIR + '/manifest.json';
+
+      var allLessons = [];
+      var allItems = [];
+      var currentIndex = 0;
+      var currentLesson = '';
+
+      var lessonTabsEl = document.getElementById('lessonTabs');
+      var container = document.getElementById('grammarItemsContainer');
+      var counterDisplay = document.getElementById('counterDisplay');
+      var prevBtn = document.getElementById('prevBtn');
+      var nextBtn = document.getElementById('nextBtn');
+      var card = document.getElementById('grammarCard');
+
+      // ─── Fetch single JSON file ─────────────────────
+      function fetchJSON(path) {
+        return fetch(path).then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        });
+      }
+
+      // ─── Load all lessons from manifest ─────────────
+      function loadAllLessons() {
+        return fetchJSON(MANIFEST_PATH).then(function (manifest) {
+          var promises = manifest.lessons.map(function (entry) {
+            return fetchJSON(DATA_DIR + '/' + entry.file).then(function (data) {
+              allLessons.push(data);
+            });
+          });
+          return Promise.all(promises);
+        }).then(function () {
+          // Flatten items
+          allLessons.forEach(function (lesson) {
+            lesson.items.forEach(function (item) {
+              allItems.push(Object.assign({}, item, { lessonName: lesson.lesson }));
+            });
+          });
+        });
+      }
+
+      // ─── Furigana HTML Builder ──────────────────────
+      function buildFuriganaHTML(furiArray) {
+        return furiArray.map(function (part) {
+          var kanji = part.kanji || '';
+          var furigana = part.furigana || '';
+          var rest = part.rest || '';
+          var highlight = part.highlight || false;
+          if (!kanji) return '';
+          var hlClass = highlight ? 'bg-[#f7e3c0] dark:bg-amber-800/40 px-1.5 rounded shadow-[0_1px_4px_rgba(160,120,70,0.15)] dark:shadow-amber-900/20' : '';
+          var kanjiClass = 'text-base sm:text-lg font-semibold ' + (highlight ? 'text-[#6b4f2a] dark:text-amber-300' : '');
+          if (!furigana) {
+            return '<span class="inline-block ' + hlClass + '"><span class="' + kanjiClass + '">' + kanji + rest + '</span></span>';
+          }
+          return '<span class="inline-block mx-px ' + hlClass + '">' +
+            '<ruby class="text-center"><span class="' + kanjiClass + '">' + kanji + '</span><rt class="furigana-text font-semibold text-[#5f4e3c] dark:text-zinc-400 tracking-wide opacity-85">' + furigana + '</rt></ruby>' +
+            '<span class="' + kanjiClass + '">' + rest + '</span></span>';
+        }).join('');
+      }
+
+      // ─── Bengali Highlight Builder ──────────────────
+      function buildBnHighlight(text) {
+        var parts = text.split(/\[\[|\]\]/);
+        if (parts.length === 1) return text;
+        return parts.map(function (part, i) {
+          if (i % 2 === 1) {
+            return '<span class="bg-[#f7e3c0] dark:bg-amber-800/40 px-1.5 rounded font-bold text-[#6b4f2a] dark:text-amber-300">' + part + '</span>';
+          }
+          return part;
+        }).join('');
+      }
+
+      // ─── Render Grammar Item ────────────────────────
+      var focusedItemId = null;
+      function renderGrammarItem(item, itemIndex) {
+        var examples = item.examples || [];
+        var html = '<div id="grammar-item-' + itemIndex + '" class="grammar-item mb-7 pb-5 border-b-2 border-[#d6cdc0] dark:border-zinc-600 last:border-b-0 last:mb-2 last:pb-0 transition-all duration-300">';
+
+        // Title
+        html += '<div class="text-xl sm:text-2xl font-bold text-[#1f1913] dark:text-gray-100 tracking-tight bg-[rgba(237,231,223,0.7)] dark:bg-zinc-700/60 inline-block px-5 py-0.5 rounded-full border border-[#d6cdc0] dark:border-zinc-600 backdrop-blur-[2px] mb-2">' + item.title + '</div>';
+
+        // Meaning
+        html += '<div class="text-sm font-semibold text-[#3d3328] dark:text-zinc-300 bg-[rgba(243,238,232,0.7)] dark:bg-zinc-700/50 inline-block px-5 py-0.5 rounded-full border border-[#d6cdc0] dark:border-zinc-600 backdrop-blur-[2px] mb-3">' + item.meaning + '</div>';
+
+        // Conjugation (if exists)
+        if (item.conjugation) {
+          html += '<div class="mb-3 px-4 py-2 bg-[rgba(237,231,223,0.4)] dark:bg-zinc-800/30 rounded-xl border border-dashed border-[#c6b9aa] dark:border-zinc-600 text-xs text-[#4d3f32] dark:text-zinc-400">';
+          html += '<span class="font-bold text-[0.65rem] text-[#3d2e1d] dark:text-zinc-300 uppercase tracking-wider">Conjugation:</span>';
+          for (var key in item.conjugation) {
+            html += '<div class="mt-1 ml-2"><span class="font-semibold text-[#5f4e3c] dark:text-zinc-300">' + key + ':</span> <span>' + item.conjugation[key] + '</span></div>';
+          }
+          html += '</div>';
+        }
+
+        // Usages (if exists - for grouped rules like んです)
+        if (item.usages) {
+          item.usages.forEach(function (usage) {
+            html += '<div class="mb-3">';
+            html += '<div class="text-sm font-bold text-[#3d2e1d] dark:text-zinc-200 mb-1">▸ ' + usage.name + '</div>';
+            if (usage.note) {
+              html += '<div class="text-xs text-[#6b5f52] dark:text-zinc-400 mb-1 ml-3 italic">' + usage.note + '</div>';
+            }
+            if (usage.examples) {
+              usage.examples.forEach(function (ex) {
+                html += '<div class="mb-2 ml-3">';
+                html += '<div class="text-xl sm:text-2xl font-medium leading-[2.2] text-[#1f1913] dark:text-gray-100 bg-[rgba(250,247,242,0.8)] dark:bg-zinc-800/60 px-5 py-1.5 rounded-xl border-l-4 border-[#b7a48b] dark:border-amber-600 border border-[#e2d9ce] dark:border-zinc-600 backdrop-blur-[2px] mb-1 break-words">' + buildFuriganaHTML(ex.jpFuri) + '</div>';
+                html += '<div class="text-sm bg-[rgba(243,238,232,0.6)] dark:bg-zinc-800/40 px-5 py-1 rounded-full text-[#2c241b] dark:text-zinc-300 border border-[#d6cdc0] dark:border-zinc-600 backdrop-blur-[2px] inline-block"><strong>অর্থ:</strong> ' + buildBnHighlight(ex.bn) + '</div>';
+                html += '</div>';
+              });
+            }
+            html += '</div>';
+          });
+        }
+
+        // Examples (simple list)
+        if (examples.length > 0 && !item.usages) {
+          examples.forEach(function (ex) {
+            html += '<div class="mb-2">';
+            html += '<div class="text-xl sm:text-2xl font-medium leading-[2.2] text-[#1f1913] dark:text-gray-100 bg-[rgba(250,247,242,0.8)] dark:bg-zinc-800/60 px-5 py-1.5 rounded-xl border-l-4 border-[#b7a48b] dark:border-amber-600 border border-[#e2d9ce] dark:border-zinc-600 backdrop-blur-[2px] mb-1 break-words">' + buildFuriganaHTML(ex.jpFuri) + '</div>';
+            html += '<div class="text-sm bg-[rgba(243,238,232,0.6)] dark:bg-zinc-800/40 px-5 py-1 rounded-full text-[#2c241b] dark:text-zinc-300 border border-[#d6cdc0] dark:border-zinc-600 backdrop-blur-[2px] inline-block"><strong>অর্থ:</strong> ' + buildBnHighlight(ex.bn) + '</div>';
+            html += '</div>';
+          });
+        }
+
+        // Effect
+        if (item.effect) {
+          html += '<div class="mt-2 px-4 bg-[rgba(243,238,232,0.5)] dark:bg-zinc-800/30 rounded-full text-[0.7rem] text-[#4d3f32] dark:text-zinc-400 border border-dashed border-[#c6b9aa] dark:border-zinc-600 inline-flex items-center gap-2 flex-wrap backdrop-blur-[2px] py-1">';
+          html += '<span class="bg-[#dcd2c6] dark:bg-zinc-700 px-2.5 rounded-full font-semibold text-[0.6rem] tracking-wide text-[#3d2e1d] dark:text-zinc-300">⚡</span>';
+          html += '<span>' + item.effect + '</span></div>';
+        }
+
+        html += '</div>';
+        return html;
+      }
+
+      // ─── Render Grammar ─────────────────────────────
+      function renderGrammar(index) {
+        var item = allItems[index];
+        if (!item) return;
+        var lessonName = item.lessonName;
+        var lessonItems = allItems.filter(function (it) { return it.lessonName === lessonName; });
+        var allHtml = '';
+        var globalIdx = 0;
+        allItems.forEach(function (it, i) {
+          if (it.lessonName === lessonName) {
+            allHtml += renderGrammarItem(it, i);
+          }
+        });
+        container.innerHTML = allHtml;
+        card.classList.remove('fade-in');
+        void card.offsetWidth;
+        card.classList.add('fade-in');
+        counterDisplay.textContent = (index + 1) + ' / ' + allItems.length;
+        document.querySelectorAll('.lesson-toggle-btn').forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.lesson === lessonName);
+        });
+        currentLesson = lessonName;
+        currentIndex = index;
+        renderSidebar();
+        initScrollSpy();
+      }
+
+      // ─── Lesson Tabs ────────────────────────────────
+      function renderLessonTabs() {
+        lessonTabsEl.innerHTML = '';
+        allLessons.forEach(function (lesson) {
+          var btn = document.createElement('button');
+          btn.className = 'lesson-toggle-btn px-4 py-1 rounded-full font-semibold text-xs tracking-wide border backdrop-blur-[2px] transition-all duration-150 flex-shrink-0 cursor-pointer bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border-[#d0c5b6] dark:border-zinc-600 text-[#4d4035] dark:text-zinc-300 hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 hover:border-[#b09f8e]';
+          if (lesson.lesson === currentLesson) {
+            btn.className += ' !bg-[#2c241b] !text-[#f5efe8] !border-[#2c241b] dark:!bg-amber-700 dark:!text-white dark:!border-amber-600';
+          }
+          btn.textContent = lesson.lesson;
+          btn.dataset.lesson = lesson.lesson;
+          btn.addEventListener('click', function () {
+            currentLesson = lesson.lesson;
+            var firstIdx = allItems.findIndex(function (item) { return item.lessonName === currentLesson; });
+            if (firstIdx !== -1) { currentIndex = firstIdx; renderGrammar(currentIndex); }
+            renderLessonTabs();
+            var url = new URL(window.location);
+            url.searchParams.set('lesson', lesson.lesson);
+            url.searchParams.set('item', currentIndex);
+            history.pushState(null, '', url);
+          });
+          lessonTabsEl.appendChild(btn);
+        });
+      }
+
+      // ─── Navigation ─────────────────────────────────
+      function updateURL() {
+        var url = new URL(window.location);
+        url.searchParams.set('lesson', allItems[currentIndex].lessonName);
+        url.searchParams.set('item', currentIndex);
+        history.pushState(null, '', url);
+      }
+      function goToPrev() { currentIndex = (currentIndex - 1 + allItems.length) % allItems.length; renderGrammar(currentIndex); updateURL(); }
+      function goToNext() { currentIndex = (currentIndex + 1) % allItems.length; renderGrammar(currentIndex); updateURL(); }
+
+      // ─── Sidebar ──────────────────────────────────────
+      var sidebar = document.getElementById('sidebar');
+      var sidebarContent = document.getElementById('sidebarContent');
+      var sidebarToggle = document.getElementById('sidebarToggle');
+      var sidebarClose = document.getElementById('sidebarClose');
+      var sidebarOverlay = document.getElementById('sidebarOverlay');
+
+      function openSidebar() {
+        sidebar.classList.remove('-translate-x-full');
+        sidebarOverlay.classList.remove('hidden');
+      }
+      function closeSidebar() {
+        sidebar.classList.add('-translate-x-full');
+        sidebarOverlay.classList.add('hidden');
+      }
+      sidebarToggle.addEventListener('click', openSidebar);
+      sidebarClose.addEventListener('click', closeSidebar);
+      sidebarOverlay.addEventListener('click', closeSidebar);
+
+      function renderSidebar() {
+        var html = '';
+        var grouped = {};
+        allItems.forEach(function (item, idx) {
+          if (!grouped[item.lessonName]) grouped[item.lessonName] = [];
+          grouped[item.lessonName].push({ item: item, idx: idx });
+        });
+        for (var lesson in grouped) {
+          html += '<div>';
+          html += '<div class="text-xs font-bold text-[#b7a48b] dark:text-amber-500 uppercase tracking-wider mb-1 px-2 border-b border-dashed border-[#d6cdc0] dark:border-zinc-600 pb-1">' + lesson + '</div>';
+          html += '<div class="space-y-0.5">';
+          grouped[lesson].forEach(function (entry) {
+            var isActive = entry.idx === currentIndex;
+            html += '<button class="sidebar-item w-full text-left px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150 cursor-pointer ' +
+              (isActive
+                ? 'bg-[#2c241b] text-[#f5efe8] dark:bg-amber-700 dark:text-white'
+                : 'text-[#3d3328] dark:text-zinc-300 hover:bg-[#e5ddd4] dark:hover:bg-zinc-600') +
+              '" data-index="' + entry.idx + '">' +
+              '<span class="line-clamp-1">' + entry.item.title + '</span></button>';
+          });
+          html += '</div></div>';
+        }
+        sidebarContent.innerHTML = html;
+        sidebarContent.querySelectorAll('.sidebar-item').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var idx = parseInt(this.dataset.index);
+            currentIndex = idx;
+            renderGrammar(idx);
+            renderSidebar();
+            closeSidebar();
+            // URL update
+            var url = new URL(window.location);
+            url.searchParams.set('lesson', allItems[idx].lessonName);
+            url.searchParams.set('item', idx);
+            history.pushState(null, '', url);
+            // Scroll to center and flash effect
+            setTimeout(function () {
+              var el = document.getElementById('grammar-item-' + idx);
+              if (el) {
+                var rect = el.getBoundingClientRect();
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                var centerOffset = (window.innerHeight / 2) - (rect.height / 2);
+                window.scrollTo({ top: rect.top + scrollTop - centerOffset, behavior: 'smooth' });
+                el.classList.add('grammar-focus-flash');
+                setTimeout(function () { el.classList.remove('grammar-focus-flash'); }, 1500);
+              }
+            }, 50);
+          });
+        });
+      }
+
+      // ─── Scroll Spy ──────────────────────────────────
+      var lastScrolledIdx = -1;
+      function initScrollSpy() {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var id = entry.target.id;
+              var idx = parseInt(id.replace('grammar-item-', ''));
+              if (!isNaN(idx) && idx !== currentIndex) {
+                currentIndex = idx;
+                currentLesson = allItems[idx].lessonName;
+                renderSidebar();
+                renderLessonTabs();
+                var url = new URL(window.location);
+                url.searchParams.set('lesson', currentLesson);
+                url.searchParams.set('item', idx);
+                history.replaceState(null, '', url);
+              }
+              if (!isNaN(idx) && idx !== lastScrolledIdx) {
+                lastScrolledIdx = idx;
+                entry.target.classList.remove('grammar-focus-flash');
+                void entry.target.offsetWidth;
+                entry.target.classList.add('grammar-focus-flash');
+                setTimeout(function () { entry.target.classList.remove('grammar-focus-flash'); }, 1500);
+              }
+            }
+          });
+        }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+
+        document.querySelectorAll('.grammar-item').forEach(function (el) {
+          observer.observe(el);
+        });
+      }
+
+      // ─── URL Params ─────────────────────────────────
+      function getLessonFromURL() {
+        var params = new URLSearchParams(window.location.search);
+        return params.get('lesson');
+      }
+      function getItemFromURL() {
+        var params = new URLSearchParams(window.location.search);
+        var item = params.get('item');
+        return item ? parseInt(item) : null;
+      }
+
+      // ─── Init ───────────────────────────────────────
+      loadAllLessons().then(function () {
+        var urlLesson = getLessonFromURL();
+        var urlItem = getItemFromURL();
+        if (urlLesson && allLessons.some(function (l) { return l.lesson === urlLesson; })) {
+          currentLesson = urlLesson;
+        }
+        renderLessonTabs();
+        renderSidebar();
+        if (urlItem !== null && urlItem >= 0 && urlItem < allItems.length) {
+          currentIndex = urlItem;
+        } else {
+          var firstIdx = allItems.findIndex(function (item) { return item.lessonName === currentLesson; });
+          if (firstIdx !== -1) currentIndex = firstIdx;
+        }
+        renderGrammar(currentIndex);
+        initScrollSpy();
+        prevBtn.addEventListener('click', goToPrev);
+        nextBtn.addEventListener('click', goToNext);
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft') goToPrev();
+          else if (e.key === 'ArrowRight') goToNext();
+        });
+      }).catch(function (err) {
+        container.innerHTML = '<div class="text-center py-10 text-red-500 dark:text-red-400 font-semibold">⚠️ Data লোড হয়নি!<br><span class="text-sm font-normal text-zinc-500 dark:text-zinc-400 mt-2 block">start-server.bat চালাও অথবা Python server চালাও</span><br><span class="text-xs font-normal text-zinc-400 dark:text-zinc-500 mt-1 block">Error: ' + err.message + '</span></div>';
+      });
+
+    })();
+  </script>
+</body>
+</html>

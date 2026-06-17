@@ -1,0 +1,429 @@
+{
+  "lesson": "Lesson 27",
+  "items": [
+    {
+      "title": "かのうけい (Potential Verb)",
+      "meaning": "কোনো কিছু করতে পারার সামর্থ্য, যোগ্যতা বা সুযোগ বোঝায়",
+      "conjugation": {
+        "godan": "শেষের う段 → え段 + る (いく → いける, よむ → よめる, はなす → はなせる)",
+        "ichidan": "る → られる (たべる → たべられる, おしえる → おしえられる)",
+        "irregular": "する → できる, くる → こられる",
+        "particle_change": "সাধারণত を → が (にほんごをはなす → にほんごがはなせる)"
+      },
+      "examples": [
+        {
+          "jpFuri": [
+            {
+              "kanji": "わたし",
+              "furigana": ""
+            },
+            {
+              "kanji": "は",
+              "furigana": ""
+            },
+            {
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "kanji": "へ",
+              "furigana": ""
+            },
+            {
+              "kanji": "行",
+              "furigana": "い",
+              "rest": "けます",
+              "highlight": true
+            }
+          ],
+          "bn": "আমি জাপানে [[যেতে পারি]]।",
+          "baseVerb": "行く → 行ける"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "わたし",
+              "furigana": ""
+            },
+            {
+              "kanji": "は",
+              "furigana": ""
+            },
+            {
+              "kanji": "漢字",
+              "furigana": "かんじ"
+            },
+            {
+              "kanji": "が",
+              "furigana": ""
+            },
+            {
+              "kanji": "読",
+              "furigana": "よ",
+              "rest": "めます",
+              "highlight": true
+            }
+          ],
+          "bn": "আমি কাঞ্জি [[পড়তে পারি]]।",
+          "baseVerb": "読む → 読める"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "わたし",
+              "furigana": ""
+            },
+            {
+              "kanji": "は",
+              "furigana": ""
+            },
+            {
+              "kanji": "日本語",
+              "furigana": "にほんご"
+            },
+            {
+              "kanji": "が",
+              "furigana": ""
+            },
+            {
+              "kanji": "教え",
+              "furigana": "おし",
+              "rest": "られます",
+              "highlight": true
+            }
+          ],
+          "bn": "আমি জাপানি ভাষা [[শেখাতে পারি]]।",
+          "baseVerb": "教える → 教えられる"
+        }
+      ],
+      "effect": "N5 এর ～ことができます এর পরিবর্তে N4 এ かのうけい ব্যবহৃত হয়। অনেক ক্ষেত্রে を পার্টিকেলের পরিবর্তে が ব্যবহৃত হয়।"
+    },
+    {
+      "title": "みえます・きこえます",
+      "meaning": "নিজের ইচ্ছা ছাড়াই প্রাকৃতিক বা স্বাভাবিকভাবে চোখে দেখা বা কানে শোনা যাওয়া",
+      "note": "みえます / きこえます = স্বতঃস্ফূর্ত অনুভূতি, みられます / きけます = নিজের ইচ্ছায়",
+      "examples": [
+        {
+          "jpFuri": [
+            {
+              "kanji": "わたし",
+              "furigana": ""
+            },
+            {
+              "kanji": "の",
+              "furigana": ""
+            },
+            {
+              "kanji": "家",
+              "furigana": "いえ"
+            },
+            {
+              "kanji": "から",
+              "furigana": ""
+            },
+            {
+              "kanji": "向こう",
+              "furigana": "むこう"
+            },
+            {
+              "kanji": "の",
+              "furigana": ""
+            },
+            {
+              "kanji": "山",
+              "furigana": "やま"
+            },
+            {
+              "kanji": "が",
+              "furigana": ""
+            },
+            {
+              "kanji": "見",
+              "furigana": "み",
+              "rest": "えます",
+              "highlight": true
+            }
+          ],
+          "bn": "আমার বাড়ি থেকে দূরের পাহাড় [[দেখা যায়]]।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "わたし",
+              "furigana": ""
+            },
+            {
+              "kanji": "の",
+              "furigana": ""
+            },
+            {
+              "kanji": "家",
+              "furigana": "いえ"
+            },
+            {
+              "kanji": "から",
+              "furigana": ""
+            },
+            {
+              "kanji": "海",
+              "furigana": "うみ"
+            },
+            {
+              "kanji": "の",
+              "furigana": ""
+            },
+            {
+              "kanji": "波",
+              "furigana": "なみ"
+            },
+            {
+              "kanji": "が",
+              "furigana": ""
+            },
+            {
+              "kanji": "聞",
+              "furigana": "き",
+              "rest": "こえます",
+              "highlight": true
+            }
+          ],
+          "bn": "আমার বাড়ি থেকে সমুদ্রের ঢেউয়ের শব্দ [[শোনা যায়]]।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "隣",
+              "furigana": "となり"
+            },
+            {
+              "kanji": "の",
+              "furigana": ""
+            },
+            {
+              "kanji": "うち",
+              "furigana": ""
+            },
+            {
+              "kanji": "から",
+              "furigana": ""
+            },
+            {
+              "kanji": "赤ちゃん",
+              "furigana": "あかちゃん"
+            },
+            {
+              "kanji": "の",
+              "furigana": ""
+            },
+            {
+              "kanji": "声",
+              "furigana": "こえ"
+            },
+            {
+              "kanji": "が",
+              "furigana": ""
+            },
+            {
+              "kanji": "聞こえます",
+              "furigana": "き",
+              "highlight": true
+            }
+          ],
+          "bn": "পাশের বাসা থেকে বাচ্চার কণ্ঠস্বর [[শোনা যায়]]।"
+        }
+      ],
+      "effect": "みえます / きこえます হলো প্রাকৃতিক বা স্বতঃস্ফূর্ত অনুভূতি, আর みられます / きけます হলো নিজের ইচ্ছায় কোনো কিছু দেখা বা শোনা।"
+    },
+    {
+      "title": "できます (Intransitive)",
+      "meaning": "কোনো কিছু তৈরি হওয়া, নির্মিত হওয়া বা প্রস্তুত হওয়া",
+      "examples": [
+        {
+          "jpFuri": [
+            {
+              "kanji": "駅",
+              "furigana": "えき"
+            },
+            {
+              "kanji": "の",
+              "furigana": ""
+            },
+            {
+              "kanji": "前",
+              "furigana": "まえ"
+            },
+            {
+              "kanji": "に",
+              "furigana": ""
+            },
+            {
+              "kanji": "大きい",
+              "furigana": "おお"
+            },
+            {
+              "kanji": "スーパー",
+              "furigana": ""
+            },
+            {
+              "kanji": "が",
+              "furigana": ""
+            },
+            {
+              "kanji": "できました",
+              "furigana": "",
+              "highlight": true
+            }
+          ],
+          "bn": "স্টেশনের সামনে একটি বড় সুপারমার্কেট [[তৈরি হয়েছে]]।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "晩ご飯",
+              "furigana": "ばんごはん"
+            },
+            {
+              "kanji": "が",
+              "furigana": ""
+            },
+            {
+              "kanji": "できました",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "よ",
+              "furigana": ""
+            }
+          ],
+          "bn": "রাতের খাবার [[প্রস্তুত হয়েছে]]।"
+        }
+      ],
+      "effect": "できます নতুন কিছু নির্মিত হওয়া, প্রতিষ্ঠিত হওয়া বা প্রস্তুত হওয়া বোঝাতে ব্যবহৃত হয়।"
+    },
+    {
+      "title": "だけ・しか",
+      "meaning": "শুধু বা কেবলমাত্র (だけ ইতিবাচক বাক্যে, しか নেতিবাচক বাক্যে ব্যবহৃত হয়)",
+      "examples": [
+        {
+          "jpFuri": [
+            {
+              "kanji": "漢字",
+              "furigana": "かんじ"
+            },
+            {
+              "kanji": "だけ",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "読めます",
+              "furigana": "よ"
+            }
+          ],
+          "bn": "আমি [[শুধু]] কাঞ্জি পড়তে পারি।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "漢字",
+              "furigana": "かんじ"
+            },
+            {
+              "kanji": "しか",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "読めません",
+              "furigana": "よ"
+            }
+          ],
+          "bn": "আমি কাঞ্জি [[ছাড়া আর কিছু পারি না]]।"
+        }
+      ],
+      "effect": "NOUN + だけ + Affirmative Verb / NOUN + しか + Negative Verb"
+    },
+    {
+      "title": "は (Contrastive)",
+      "meaning": "দুটি বিষয়ের মধ্যে বৈপরীত্য বা তুলনা প্রকাশ করা",
+      "examples": [
+        {
+          "jpFuri": [
+            {
+              "kanji": "お酒",
+              "furigana": "さけ"
+            },
+            {
+              "kanji": "は",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "飲みます",
+              "furigana": "の"
+            },
+            {
+              "kanji": "が",
+              "furigana": ""
+            },
+            {
+              "kanji": "ビール",
+              "furigana": ""
+            },
+            {
+              "kanji": "は",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "飲みません",
+              "furigana": "の"
+            }
+          ],
+          "bn": "মদ পান করি, [[কিন্তু]] বিয়ার পান করি না।"
+        },
+        {
+          "jpFuri": [
+            {
+              "kanji": "今日",
+              "furigana": "きょう"
+            },
+            {
+              "kanji": "は",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "忙しい",
+              "furigana": "いそが"
+            },
+            {
+              "kanji": "ですが",
+              "furigana": ""
+            },
+            {
+              "kanji": "明日",
+              "furigana": "あした"
+            },
+            {
+              "kanji": "は",
+              "furigana": "",
+              "highlight": true
+            },
+            {
+              "kanji": "暇",
+              "furigana": "ひま"
+            },
+            {
+              "kanji": "です",
+              "furigana": ""
+            }
+          ],
+          "bn": "আজ ব্যস্ত, [[কিন্তু]] কাল ফ্রি।"
+        }
+      ],
+      "effect": "Contrastive は দুটি বিষয়ের মধ্যে পার্থক্য বা বৈপরীত্য জোর দিয়ে প্রকাশ করে।"
+    }
+  ]
+}
