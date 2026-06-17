@@ -87,6 +87,7 @@
     .loading-spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid #d6cdc0; border-top-color: #6b4f2a; border-radius: 50%; animation: spin 0.6s linear infinite; }
     .dark .loading-spinner { border-color: #52525b; border-top-color: #fbbf24; }
     @keyframes spin { to { transform: rotate(360deg); } }
+    .dark #themeIcon, .dark #sidebarToggle span { filter: brightness(0) invert(1); }
     @keyframes flashFocus {
       0% { box-shadow: 0 0 0 0 rgba(251,191,36,0.7); background-color: rgba(251,191,36,0.15); }
       50% { box-shadow: 0 0 20px 4px rgba(251,191,36,0.5); background-color: rgba(251,191,36,0.25); }
@@ -96,8 +97,12 @@
 
     /* Mobile App-like Styles */
     @media (max-width: 767px) {
-      body { padding: 0 !important; min-height: 100dvh; background: #1a1a1f !important; }
-      .app-container { max-width: 100% !important; border-radius: 0 !important; margin: 0 !important; border: none !important; box-shadow: none !important; min-height: 100dvh; background: #1a1a1f !important; }
+      body { padding: 0 !important; min-height: 100dvh; }
+      html:not(.dark) body { background: #d6d0c8 !important; }
+      html.dark body { background: #1a1a1f !important; }
+      .app-container { max-width: 100% !important; border-radius: 0 !important; margin: 0 !important; border: none !important; box-shadow: none !important; min-height: 100dvh; }
+      html:not(.dark) .app-container { background: #fcf8f2 !important; }
+      html.dark .app-container { background: #1a1a1f !important; }
       .app-container .relative { padding: 10px 12px !important; background: transparent !important; backdrop-filter: none !important; }
       .app-container .punch-hole { display: none !important; }
       #grammarItemsContainer { border: none !important; }
@@ -106,12 +111,16 @@
       #grammarItemsContainer .text-sm { font-size: 0.7rem !important; }
       #grammarItemsContainer .px-5 { padding-left: 10px !important; padding-right: 10px !important; }
       #grammarItemsContainer .py-1\\.5 { padding-top: 6px !important; padding-bottom: 6px !important; }
-      #grammarItemsContainer .rounded-xl { border-radius: 6px !important; }
+      #grammarItemsContainer .rounded-xl { border-radius: 0 !important; }
+      #grammarItemsContainer .rounded-full { border-radius: 0 !important; }
+      #grammarItemsContainer .rounded-lg { border-radius: 0 !important; }
+      #grammarItemsContainer .rounded { border-radius: 0 !important; }
       #grammarItemsContainer .border-l-4 { border-left-width: 2px !important; }
       .lesson-toggle-btn { padding: 5px 10px !important; font-size: 0.6rem !important; border-radius: 4px !important; }
       #prevBtn, #nextBtn { padding: 6px 12px !important; font-size: 0.65rem !important; border-radius: 4px !important; }
       #counterDisplay { font-size: 0.6rem !important; padding: 3px 10px !important; border-radius: 4px !important; }
       #lessonTabs { gap: 4px !important; margin-bottom: 10px !important; padding-bottom: 8px !important; }
+      .effect-box { border: none !important; padding-left: 0 !important; padding-right: 0 !important; }
     }
 
     /* Safe area for notch devices */
@@ -155,7 +164,7 @@
   <!-- Sidebar Overlay (Mobile) -->
   <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
 
-  <div id="app" class="app-container relative max-w-[820px] w-full rounded-none p-4 sm:p-6 md:p-7 notebook-lines bg-[#fcf8f2] dark:bg-[#1a1a1f] shadow-none md:shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:md:shadow-[0_8px_32px_rgba(0,0,0,0.5)] border-0 md:border border-[#e8e0d6] dark:border-zinc-700 transition-colors duration-300 md:ml-72">
+  <div id="app" class="app-container relative max-w-[820px] w-full rounded-none p-4 sm:p-6 md:p-7 pt-10 sm:pt-12 md:pt-7 notebook-lines bg-[#fcf8f2] dark:bg-[#1a1a1f] shadow-none md:shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:md:shadow-[0_8px_32px_rgba(0,0,0,0.5)] border-0 md:border border-[#e8e0d6] dark:border-zinc-700 transition-colors duration-300 md:ml-72">
 
     <div class="punch-hole top-[15%] hidden md:block bg-[#fcf8f2] dark:bg-[#24242a] border-2 border-[#c5b9aa] dark:border-zinc-600 shadow-inner"></div>
     <div class="punch-hole top-1/2 -translate-y-1/2 hidden md:block bg-[#fcf8f2] dark:bg-[#24242a] border-2 border-[#c5b9aa] dark:border-zinc-600 shadow-inner"></div>
@@ -300,7 +309,16 @@
         var html = '<div id="grammar-item-' + itemIndex + '" class="grammar-item mb-7 pb-5 border-b-2 border-[#d6cdc0] dark:border-zinc-600 last:border-b-0 last:mb-2 last:pb-0 transition-all duration-300">';
 
         // Title
-        html += '<div class="text-xl sm:text-2xl font-bold text-[#1f1913] dark:text-gray-100 tracking-tight bg-[rgba(237,231,223,0.7)] dark:bg-zinc-700/60 inline-block px-5 py-0.5 rounded-full border border-[#d6cdc0] dark:border-zinc-600 backdrop-blur-[2px] mb-2">' + item.title + '</div>';
+        var titleColors = [
+          'bg-[#e8d5b7] dark:bg-amber-900/50 border-[#c9b896] dark:border-amber-700/50',
+          'bg-[#b7d5e8] dark:bg-sky-900/50 border-[#96b8c9] dark:border-sky-700/50',
+          'bg-[#d5e8b7] dark:bg-emerald-900/50 border-[#b8c996] dark:border-emerald-700/50',
+          'bg-[#e8b7d5] dark:bg-pink-900/50 border-[#c996b8] dark:border-pink-700/50',
+          'bg-[#d5b7e8] dark:bg-violet-900/50 border-[#b896c9] dark:border-violet-700/50',
+          'bg-[#e8cbb7] dark:bg-orange-900/50 border-[#c9ad96] dark:border-orange-700/50'
+        ];
+        var titleColor = titleColors[itemIndex % titleColors.length];
+        html += '<div class="text-xl sm:text-2xl font-bold text-[#1f1913] dark:text-gray-100 tracking-tight ' + titleColor + ' inline-block px-5 py-0.5 border backdrop-blur-[2px] mb-2">' + item.title + '</div>';
 
         // Meaning
         html += '<div class="text-sm font-semibold text-[#3d3328] dark:text-zinc-300 bg-[rgba(243,238,232,0.7)] dark:bg-zinc-700/50 inline-block px-5 py-0.5 rounded-full border border-[#d6cdc0] dark:border-zinc-600 backdrop-blur-[2px] mb-3">' + item.meaning + '</div>';
@@ -347,7 +365,7 @@
 
         // Effect
         if (item.effect) {
-          html += '<div class="mt-2 px-4 bg-[rgba(243,238,232,0.5)] dark:bg-zinc-800/30 rounded-full text-[0.7rem] text-[#4d3f32] dark:text-zinc-400 border border-dashed border-[#c6b9aa] dark:border-zinc-600 inline-flex items-center gap-2 flex-wrap backdrop-blur-[2px] py-1">';
+          html += '<div class="effect-box mt-2 px-4 bg-[rgba(243,238,232,0.5)] dark:bg-zinc-800/30 rounded-full text-[0.7rem] text-[#4d3f32] dark:text-zinc-400 border border-dashed border-[#c6b9aa] dark:border-zinc-600 inline-flex items-center gap-2 flex-wrap backdrop-blur-[2px] py-1">';
           html += '<span class="bg-[#dcd2c6] dark:bg-zinc-700 px-2.5 rounded-full font-semibold text-[0.6rem] tracking-wide text-[#3d2e1d] dark:text-zinc-300">⚡</span>';
           html += '<span>' + item.effect + '</span></div>';
         }
