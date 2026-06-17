@@ -66,7 +66,9 @@
     }
   </script>
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    * { -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', sans-serif; overscroll-behavior-y: contain; }
     .notebook-lines {
       background-image: repeating-linear-gradient(transparent, transparent 30px, rgba(200,190,175,0.35) 30px, rgba(200,190,175,0.35) 31px);
       background-size: 100% 31px; background-position: 0 38px;
@@ -75,10 +77,13 @@
       background-image: repeating-linear-gradient(transparent, transparent 30px, rgba(80,70,60,0.3) 30px, rgba(80,70,60,0.3) 31px);
     }
     .punch-hole { position: absolute; left: 14px; width: 9px; height: 9px; border-radius: 50%; z-index: 5; }
-    .fade-in { animation: fadeUp 0.25s ease forwards; }
-    @keyframes fadeUp { 0% { opacity:0.3; transform:translateY(6px); } 100% { opacity:1; transform:translateY(0); } }
+    .fade-in { animation: fadeUp 0.3s ease-out forwards; }
+    .fade-out { animation: fadeDown 0.15s ease-in forwards; }
+    @keyframes fadeUp { 0% { opacity:0; transform:translateY(8px); } 100% { opacity:1; transform:translateY(0); } }
+    @keyframes fadeDown { 0% { opacity:1; transform:translateY(0); } 100% { opacity:0; transform:translateY(-4px); } }
     .furigana-text { font-size: 0.5rem; line-height: 1; }
     .dark .furigana-text { color: #a8998a; }
+    #grammarItemsContainer { transition: opacity 0.15s ease; }
     .loading-spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid #d6cdc0; border-top-color: #6b4f2a; border-radius: 50%; animation: spin 0.6s linear infinite; }
     .dark .loading-spinner { border-color: #52525b; border-top-color: #fbbf24; }
     @keyframes spin { to { transform: rotate(360deg); } }
@@ -87,7 +92,32 @@
       50% { box-shadow: 0 0 20px 4px rgba(251,191,36,0.5); background-color: rgba(251,191,36,0.25); }
       100% { box-shadow: 0 0 0 0 rgba(251,191,36,0); background-color: transparent; }
     }
-    .grammar-focus-flash { animation: flashFocus 1.5s ease-out; border-radius: 12px; }
+    .grammar-focus-flash { animation: flashFocus 1.5s ease-out; border-radius: 8px; }
+
+    /* Mobile App-like Styles */
+    @media (max-width: 767px) {
+      body { padding: 0 !important; min-height: 100dvh; background: #1a1a1f !important; }
+      .app-container { max-width: 100% !important; border-radius: 0 !important; margin: 0 !important; border: none !important; box-shadow: none !important; min-height: 100dvh; background: #1a1a1f !important; }
+      .app-container .relative { padding: 10px 12px !important; background: transparent !important; backdrop-filter: none !important; }
+      .app-container .punch-hole { display: none !important; }
+      #grammarItemsContainer { border: none !important; }
+      #grammarItemsContainer .mb-7 { margin-bottom: 1rem !important; padding-bottom: 0.75rem !important; border-bottom-width: 1px !important; }
+      #grammarItemsContainer .text-xl, #grammarItemsContainer .text-2xl { font-size: 0.95rem !important; line-height: 1.5 !important; font-weight: 500 !important; }
+      #grammarItemsContainer .text-sm { font-size: 0.7rem !important; }
+      #grammarItemsContainer .px-5 { padding-left: 10px !important; padding-right: 10px !important; }
+      #grammarItemsContainer .py-1\\.5 { padding-top: 6px !important; padding-bottom: 6px !important; }
+      #grammarItemsContainer .rounded-xl { border-radius: 6px !important; }
+      #grammarItemsContainer .border-l-4 { border-left-width: 2px !important; }
+      .lesson-toggle-btn { padding: 5px 10px !important; font-size: 0.6rem !important; border-radius: 4px !important; }
+      #prevBtn, #nextBtn { padding: 6px 12px !important; font-size: 0.65rem !important; border-radius: 4px !important; }
+      #counterDisplay { font-size: 0.6rem !important; padding: 3px 10px !important; border-radius: 4px !important; }
+      #lessonTabs { gap: 4px !important; margin-bottom: 10px !important; padding-bottom: 8px !important; }
+    }
+
+    /* Safe area for notch devices */
+    @supports (padding-top: env(safe-area-inset-top)) {
+      body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+    }
   </style>
 </head>
 
@@ -95,56 +125,56 @@
 
   <!-- Theme Toggle -->
   <button id="themeToggle"
-    class="fixed top-4 right-4 z-50 w-11 h-11 rounded-full flex items-center justify-center bg-white/80 dark:bg-zinc-800/80 border border-[#c5b9aa] dark:border-zinc-600 shadow-md backdrop-blur-md hover:scale-105 transition-all duration-200 cursor-pointer"
+    class="fixed z-50 w-8 h-8 md:w-10 md:h-10 rounded-md md:rounded-full flex items-center justify-center bg-white/90 dark:bg-zinc-800/90 border border-[#c5b9aa] dark:border-zinc-600 shadow-sm backdrop-blur-md hover:scale-105 transition-all duration-200 cursor-pointer top-2 right-2 md:top-4 md:right-4"
     title="Toggle Dark/Light Mode">
-    <span id="themeIcon" class="text-xl select-none">☀️</span>
+    <span id="themeIcon" class="text-sm md:text-lg select-none">☀️</span>
   </button>
 
   <!-- Sidebar Toggle Button (Mobile) -->
   <button id="sidebarToggle"
-    class="fixed top-4 left-4 z-50 w-11 h-11 rounded-full flex items-center justify-center bg-white/80 dark:bg-zinc-800/80 border border-[#c5b9aa] dark:border-zinc-600 shadow-md backdrop-blur-md hover:scale-105 transition-all duration-200 cursor-pointer md:hidden"
+    class="fixed top-2 left-2 z-50 w-8 h-8 md:w-10 md:h-10 rounded-md md:rounded-full flex items-center justify-center bg-white/90 dark:bg-zinc-800/90 border border-[#c5b9aa] dark:border-zinc-600 shadow-sm backdrop-blur-md hover:scale-105 transition-all duration-200 cursor-pointer md:hidden"
     title="Grammar Rules List">
-    <span class="text-xl select-none">☰</span>
+    <span class="text-sm md:text-lg select-none">☰</span>
   </button>
 
   <!-- Sidebar -->
-  <aside id="sidebar" class="fixed top-0 left-0 h-full w-72 bg-[#fcf8f2] dark:bg-[#24242a] border-r border-[#e8e0d6] dark:border-zinc-700 shadow-lg z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto">
-    <div class="p-4">
-      <div class="flex items-center justify-between mb-4">
-        <h2 class="text-lg font-bold text-[#1f1913] dark:text-gray-100 flex items-center gap-2">
-          <span>📋</span> Grammar Rules
+  <aside id="sidebar" class="fixed top-0 left-0 h-full w-56 md:w-72 bg-[#fcf8f2] dark:bg-[#1a1a1f] border-r border-[#e8e0d6] dark:border-zinc-700 shadow-lg z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto">
+    <div class="p-2 md:p-4">
+      <div class="flex items-center justify-between mb-2 md:mb-4">
+        <h2 class="text-xs md:text-lg font-bold text-[#1f1913] dark:text-gray-100 flex items-center gap-1.5 md:gap-2">
+          <span class="text-[0.6rem] md:text-base">📋</span> <span class="text-[0.6rem] md:text-sm">Rules</span>
         </h2>
-        <button id="sidebarClose" class="md:hidden w-8 h-8 rounded-full flex items-center justify-center bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border border-[#d0c5b6] dark:border-zinc-600 text-[#4d4035] dark:text-zinc-300 hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 cursor-pointer">
+        <button id="sidebarClose" class="md:hidden w-6 h-6 rounded flex items-center justify-center bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border border-[#d0c5b6] dark:border-zinc-600 text-[#4d4035] dark:text-zinc-300 hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 cursor-pointer text-[0.5rem]">
           ✕
         </button>
       </div>
-      <div id="sidebarContent" class="space-y-3"></div>
+      <div id="sidebarContent" class="space-y-1 md:space-y-3"></div>
     </div>
   </aside>
 
   <!-- Sidebar Overlay (Mobile) -->
   <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
 
-  <div id="app" class="app-container relative max-w-[820px] w-full rounded-none p-7 sm:p-8 notebook-lines bg-[#fcf8f2] dark:bg-[#24242a] shadow-[0_8px_32px_rgba(0,0,0,0.12),0_1px_4px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.5),0_1px_4px_rgba(0,0,0,0.3)] border border-[#e8e0d6] dark:border-zinc-700 transition-colors duration-300 md:ml-72">
+  <div id="app" class="app-container relative max-w-[820px] w-full rounded-none p-4 sm:p-6 md:p-7 notebook-lines bg-[#fcf8f2] dark:bg-[#1a1a1f] shadow-none md:shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:md:shadow-[0_8px_32px_rgba(0,0,0,0.5)] border-0 md:border border-[#e8e0d6] dark:border-zinc-700 transition-colors duration-300 md:ml-72">
 
     <div class="punch-hole top-[15%] hidden md:block bg-[#fcf8f2] dark:bg-[#24242a] border-2 border-[#c5b9aa] dark:border-zinc-600 shadow-inner"></div>
     <div class="punch-hole top-1/2 -translate-y-1/2 hidden md:block bg-[#fcf8f2] dark:bg-[#24242a] border-2 border-[#c5b9aa] dark:border-zinc-600 shadow-inner"></div>
     <div class="punch-hole bottom-[15%] hidden md:block bg-[#fcf8f2] dark:bg-[#24242a] border-2 border-[#c5b9aa] dark:border-zinc-600 shadow-inner"></div>
 
-    <div class="relative z-10 bg-white/75 dark:bg-zinc-900/70 backdrop-blur-[3px] rounded-xl px-3 sm:px-5 py-3 sm:py-4 transition-colors duration-300">
+    <div class="relative z-10 bg-white/75 dark:bg-zinc-900/90 backdrop-blur-[3px] rounded-none md:rounded-xl px-2 sm:px-4 md:px-5 py-2 sm:py-3 md:py-4 transition-colors duration-300">
 
-      <header class="flex justify-between items-start flex-wrap gap-2 mb-1">
+      <header class="flex justify-between items-start flex-wrap gap-1 mb-1.5 md:mb-3">
         <div>
-          <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-[#1f1913] dark:text-gray-100 flex items-center gap-2">
-            <span>📘</span> JLPT N4
+          <h1 class="text-sm sm:text-2xl font-bold tracking-tight text-[#1f1913] dark:text-gray-100 flex items-center gap-1 md:gap-2">
+            <span class="text-xs md:text-lg">📘</span> <span class="text-xs md:text-xl">JLPT N4</span>
           </h1>
-          <div class="text-[0.7rem] font-medium text-[#6b5f52] dark:text-zinc-400 mt-0.5 border-l-2 border-[#b7a48b] dark:border-zinc-500 pl-3 bg-[rgba(243,238,232,0.5)] dark:bg-zinc-800/50 rounded-r-md inline-block px-3 py-0.5">
+          <div class="text-[0.5rem] md:text-[0.7rem] font-medium text-[#6b5f52] dark:text-zinc-400 mt-0 border-l-2 border-[#b7a48b] dark:border-zinc-500 pl-1.5 md:pl-3 bg-[rgba(243,238,232,0.5)] dark:bg-zinc-800/50 rounded-r-sm md:rounded-r-md inline-block px-1.5 md:px-3 py-0.5">
             ✦ ফুরিগানা · নোটবুক
           </div>
         </div>
       </header>
 
-      <div id="lessonTabs" class="flex flex-wrap items-center gap-2 mb-4 border-b border-dashed border-[#d6cdc0] dark:border-zinc-600 pb-3"></div>
+      <div id="lessonTabs" class="flex flex-wrap items-center gap-1.5 md:gap-2 mb-3 md:mb-4 border-b border-dashed border-[#d6cdc0] dark:border-zinc-600 pb-2 md:pb-3"></div>
 
       <div id="grammarCard" class="fade-in rounded-none">
         <div id="grammarItemsContainer">
@@ -154,12 +184,12 @@
           </div>
         </div>
 
-        <div class="flex justify-between items-center mt-5 gap-3 flex-wrap border-t border-dashed border-[#d6cdc0] dark:border-zinc-600 pt-4">
-          <button id="prevBtn" class="px-5 py-1.5 rounded-full font-semibold text-sm text-[#3d3328] dark:text-zinc-200 bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border border-[#d0c5b6] dark:border-zinc-600 backdrop-blur-[2px] hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 hover:border-[#b09f8e] active:scale-95 transition-all duration-150 cursor-pointer">
+        <div class="flex justify-between items-center mt-3 md:mt-5 gap-2 md:gap-3 flex-wrap border-t border-dashed border-[#d6cdc0] dark:border-zinc-600 pt-3 md:pt-4">
+          <button id="prevBtn" class="px-3 md:px-5 py-1.5 rounded-full font-semibold text-[0.65rem] md:text-sm text-[#3d3328] dark:text-zinc-200 bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border border-[#d0c5b6] dark:border-zinc-600 backdrop-blur-[2px] hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 hover:border-[#b09f8e] active:scale-95 transition-all duration-150 cursor-pointer">
             ← আগের
           </button>
-          <span class="font-medium text-xs px-4 py-1 rounded-full text-[#3d3328] dark:text-zinc-300 bg-[rgba(237,231,223,0.6)] dark:bg-zinc-700/60 border border-[#d6cdc0] dark:border-zinc-600 backdrop-blur-[2px]" id="counterDisplay">0 / 0</span>
-          <button id="nextBtn" class="px-5 py-1.5 rounded-full font-semibold text-sm text-[#3d3328] dark:text-zinc-200 bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border border-[#d0c5b6] dark:border-zinc-600 backdrop-blur-[2px] hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 hover:border-[#b09f8e] active:scale-95 transition-all duration-150 cursor-pointer">
+          <span class="font-medium text-[0.6rem] md:text-xs px-3 md:px-4 py-0.5 md:py-1 rounded-full text-[#3d3328] dark:text-zinc-300 bg-[rgba(237,231,223,0.6)] dark:bg-zinc-700/60 border border-[#d6cdc0] dark:border-zinc-600 backdrop-blur-[2px]" id="counterDisplay">0 / 0</span>
+          <button id="nextBtn" class="px-3 md:px-5 py-1.5 rounded-full font-semibold text-[0.65rem] md:text-sm text-[#3d3328] dark:text-zinc-200 bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border border-[#d0c5b6] dark:border-zinc-600 backdrop-blur-[2px] hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 hover:border-[#b09f8e] active:scale-95 transition-all duration-150 cursor-pointer">
             পরবর্তী →
           </button>
         </div>
@@ -358,7 +388,7 @@
         lessonTabsEl.innerHTML = '';
         allLessons.forEach(function (lesson) {
           var btn = document.createElement('button');
-          btn.className = 'lesson-toggle-btn px-4 py-1 rounded-full font-semibold text-xs tracking-wide border backdrop-blur-[2px] transition-all duration-150 flex-shrink-0 cursor-pointer bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border-[#d0c5b6] dark:border-zinc-600 text-[#4d4035] dark:text-zinc-300 hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 hover:border-[#b09f8e]';
+          btn.className = 'lesson-toggle-btn px-2 md:px-4 py-1 rounded md:rounded-full font-semibold text-[0.55rem] md:text-xs tracking-wide border backdrop-blur-[2px] transition-all duration-150 flex-shrink-0 cursor-pointer bg-[rgba(245,240,234,0.7)] dark:bg-zinc-700/70 border-[#d0c5b6] dark:border-zinc-600 text-[#4d4035] dark:text-zinc-300 hover:bg-[#e5ddd4] dark:hover:bg-zinc-600 hover:border-[#b09f8e]';
           if (lesson.lesson === currentLesson) {
             btn.className += ' !bg-[#2c241b] !text-[#f5efe8] !border-[#2c241b] dark:!bg-amber-700 dark:!text-white dark:!border-amber-600';
           }
@@ -416,11 +446,11 @@
         });
         for (var lesson in grouped) {
           html += '<div>';
-          html += '<div class="text-xs font-bold text-[#b7a48b] dark:text-amber-500 uppercase tracking-wider mb-1 px-2 border-b border-dashed border-[#d6cdc0] dark:border-zinc-600 pb-1">' + lesson + '</div>';
-          html += '<div class="space-y-0.5">';
+          html += '<div class="text-[0.5rem] md:text-xs font-bold text-[#b7a48b] dark:text-amber-500 uppercase tracking-wider mb-0.5 md:mb-1 px-1 md:px-2 border-b border-dashed border-[#d6cdc0] dark:border-zinc-600 pb-0.5 md:pb-1">' + lesson + '</div>';
+          html += '<div class="space-y-0">';
           grouped[lesson].forEach(function (entry) {
             var isActive = entry.idx === currentIndex;
-            html += '<button class="sidebar-item w-full text-left px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150 cursor-pointer ' +
+            html += '<button class="sidebar-item w-full text-left px-2 md:px-3 py-1 md:py-1.5 rounded md:rounded-lg text-[0.6rem] md:text-sm font-medium transition-all duration-150 cursor-pointer ' +
               (isActive
                 ? 'bg-[#2c241b] text-[#f5efe8] dark:bg-amber-700 dark:text-white'
                 : 'text-[#3d3328] dark:text-zinc-300 hover:bg-[#e5ddd4] dark:hover:bg-zinc-600') +
