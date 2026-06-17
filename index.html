@@ -124,8 +124,8 @@
       var themeToggle = document.getElementById('themeToggle');
       var themeIcon = document.getElementById('themeIcon');
       var savedTheme = localStorage.getItem('jft-theme');
-      if (savedTheme === 'dark') { html.classList.add('dark'); themeIcon.textContent = '🌙'; }
-      else { html.classList.remove('dark'); themeIcon.textContent = '☀️'; }
+      if (savedTheme === 'light') { html.classList.remove('dark'); themeIcon.textContent = '☀️'; }
+      else { html.classList.add('dark'); themeIcon.textContent = '🌙'; }
       themeToggle.addEventListener('click', function () {
         html.classList.toggle('dark');
         var isDark = html.classList.contains('dark');
