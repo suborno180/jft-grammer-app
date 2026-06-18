@@ -255,12 +255,15 @@
       // ─── Load all lessons from manifest ─────────────
       function loadAllLessons() {
         return fetchJSON(MANIFEST_PATH).then(function (manifest) {
-          var promises = manifest.lessons.map(function (entry) {
+          var results = [];
+          var promises = manifest.lessons.map(function (entry, index) {
             return fetchJSON(DATA_DIR + '/' + entry.file).then(function (data) {
-              allLessons.push(data);
+              results[index] = data;
             });
           });
-          return Promise.all(promises);
+          return Promise.all(promises).then(function () {
+            allLessons = results;
+          });
         }).then(function () {
           // Flatten items
           allLessons.forEach(function (lesson) {
@@ -498,8 +501,11 @@
                 var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 var centerOffset = (window.innerHeight / 2) - (rect.height / 2);
                 window.scrollTo({ top: rect.top + scrollTop - centerOffset, behavior: 'smooth' });
+                skipScrollSpyFlash = true;
+                el.classList.remove('grammar-focus-flash');
+                void el.offsetWidth;
                 el.classList.add('grammar-focus-flash');
-                setTimeout(function () { el.classList.remove('grammar-focus-flash'); }, 1500);
+                setTimeout(function () { el.classList.remove('grammar-focus-flash'); skipScrollSpyFlash = false; }, 1500);
               }
             }, 50);
           });
@@ -508,31 +514,43 @@
 
       // ─── Scroll Spy ──────────────────────────────────
       var lastScrolledIdx = -1;
+      var skipScrollSpyFlash = false;
       function initScrollSpy() {
         var observer = new IntersectionObserver(function (entries) {
+          if (skipScrollSpyFlash) return;
+          var bestEntry = null;
+          var bestDist = Infinity;
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              var id = entry.target.id;
-              var idx = parseInt(id.replace('grammar-item-', ''));
-              if (!isNaN(idx) && idx !== currentIndex) {
-                currentIndex = idx;
-                currentLesson = allItems[idx].lessonName;
-                renderSidebar();
-                renderLessonTabs();
-                var url = new URL(window.location);
-                url.searchParams.set('lesson', currentLesson);
-                url.searchParams.set('item', idx);
-                history.replaceState(null, '', url);
-              }
-              if (!isNaN(idx) && idx !== lastScrolledIdx) {
-                lastScrolledIdx = idx;
-                entry.target.classList.remove('grammar-focus-flash');
-                void entry.target.offsetWidth;
-                entry.target.classList.add('grammar-focus-flash');
-                setTimeout(function () { entry.target.classList.remove('grammar-focus-flash'); }, 1500);
+              var rect = entry.boundingClientRect;
+              var dist = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+              if (dist < bestDist) {
+                bestDist = dist;
+                bestEntry = entry;
               }
             }
           });
+          if (bestEntry) {
+            var id = bestEntry.target.id;
+            var idx = parseInt(id.replace('grammar-item-', ''));
+            if (!isNaN(idx) && idx !== currentIndex) {
+              currentIndex = idx;
+              currentLesson = allItems[idx].lessonName;
+              renderSidebar();
+              renderLessonTabs();
+              var url = new URL(window.location);
+              url.searchParams.set('lesson', currentLesson);
+              url.searchParams.set('item', idx);
+              history.replaceState(null, '', url);
+            }
+            if (!isNaN(idx) && idx !== lastScrolledIdx) {
+              lastScrolledIdx = idx;
+              bestEntry.target.classList.remove('grammar-focus-flash');
+              void bestEntry.target.offsetWidth;
+              bestEntry.target.classList.add('grammar-focus-flash');
+              setTimeout(function () { bestEntry.target.classList.remove('grammar-focus-flash'); }, 1500);
+            }
+          }
         }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
 
         document.querySelectorAll('.grammar-item').forEach(function (el) {
@@ -593,6 +611,13 @@
       function applyZoom() {
         app.style.transform = 'scale(' + zoomLevel + ')';
         app.style.transformOrigin = 'top center';
+        if (zoomLevel !== 1) {
+          document.body.style.overflowX = 'hidden';
+          document.documentElement.style.overflowX = 'hidden';
+        } else {
+          document.body.style.overflowX = '';
+          document.documentElement.style.overflowX = '';
+        }
       }
 
       // Ctrl + Mouse Wheel
