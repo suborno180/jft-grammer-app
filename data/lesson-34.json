@@ -105,10 +105,9 @@
             { "kanji": "べんきょうした", "furigana": "" },
             { "kanji": "あとで、", "furigana": "", "highlight": true },
             { "kanji": "にほんへ", "furigana": "" },
-            { "kanji": "アプリケーションを", "furigana": "" },
-            { "kanji": "します。", "furigana": "" }
+            { "kanji": "いきます。", "furigana": "" }
           ],
-          "bn": "N5 [[পড়ার পর]] জাপানে Application করব।"
+          "bn": "N5 পড়ার পর জাপানে যাব।"
         },
         {
           "jpFuri": [
@@ -117,7 +116,7 @@
             { "kanji": "くにへ", "furigana": "" },
             { "kanji": "かえります。", "furigana": "" }
           ],
-          "bn": "ভ্রমণের [[পর]] দেশে ফিরে আসব।"
+          "bn": "ভ্রমণের পর দেশে ফিরে আসব।"
         }
       ],
       "effect": "あとで — 'এর পর' অর্থে ব্যবহৃত হয়। Verb た form / Noun + の এর পর বসে।",
@@ -128,10 +127,10 @@
           "examples": [
             {
               "jpFuri": [
-                { "kanji": "がくこうの", "furigana": "" },
+                { "kanji": "がっこうの", "furigana": "" },
                 { "kanji": "あとで", "furigana": "" }
               ],
-              "bn": "[[পড়াশোনার]] পর"
+              "bn": "[[স্কুলের]] পর"
             },
             {
               "jpFuri": [
@@ -153,19 +152,20 @@
           "jpFuri": [
             { "kanji": "しごとの", "furigana": "" },
             { "kanji": "( )", "furigana": "" },
-            { "kanji": "のみに", "furigana": "" },
-            { "kanji": "いきませんか。", "furigana": "" }
+            { "kanji": "あとで", "furigana": "" },
+            { "kanji": "のみ", "furigana": "" },
+            { "kanji": "にいきませんか。", "furigana": "" }
           ],
-          "bn": "কাজের ( ) [[পানীয়ে]] যাবেন না?"
+          "bn": "কাজের [[পর]] পানীয়ে যাবেন না?"
         },
         {
           "jpFuri": [
             { "kanji": "あとで", "furigana": "", "highlight": true }
           ],
-          "bn": "ⓑ [[কাজের পর]]। → あとで + Verb।"
+          "bn": "ⓑ [[পরে]]। → Noun + の + あとで।"
         }
       ],
-      "effect": "Quiz: しごと = কাজ। あとで = পরে (Verb た form / Noun + の এর পর)।"
+      "effect": "Quiz: しごと = কাজ। あとで = পরে।"
     },
     {
       "title": "て form + Verb / ないで + Verb (Concurrent Actions)",
@@ -179,7 +179,7 @@
             { "kanji": "たべて", "furigana": "" },
             { "kanji": "ください。", "furigana": "" }
           ],
-          "bn": "সস [[মেশিয়ে]] খাবেন দয়া করে।"
+          "bn": "সস [[মিশিয়ে]] খাবেন দয়া করে।"
         },
         {
           "jpFuri": [
@@ -188,12 +188,12 @@
             { "kanji": "たべて", "furigana": "" },
             { "kanji": "ください。", "furigana": "" }
           ],
-          "bn": "সস [[না মেশিয়ে]] খাবেন দয়া করে।"
+          "bn": "সস [[না মিশিয়ে]] খাবেন দয়া করে।"
         },
         {
           "jpFuri": [
             { "kanji": "にちようびは", "furigana": "" },
-            { "kanji": "どこも", "furigana": "" },
+            { "kanji": "どこにも", "furigana": "" },
             { "kanji": "いかないで、", "furigana": "", "highlight": true },
             { "kanji": "うちで", "furigana": "" },
             { "kanji": "やすみます。", "furigana": "" }

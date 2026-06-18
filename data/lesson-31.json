@@ -8,16 +8,32 @@
       "examples": [
         {
           "jpFuri": [
-            { "kanji": "いっしょに", "furigana": "" },
-            { "kanji": "ひるごはんを", "furigana": "" },
-            { "kanji": "たべませんか。", "furigana": "" }
+            {
+              "kanji": "いっしょに",
+              "furigana": ""
+            },
+            {
+              "kanji": "ひるごはんを",
+              "furigana": ""
+            },
+            {
+              "kanji": "たべませんか。",
+              "furigana": ""
+            }
           ],
           "bn": "একসাথে [[দুপুরের খাবার খাবেন কি]]?"
         },
         {
           "jpFuri": [
-            { "kanji": "ええ、", "furigana": "" },
-            { "kanji": "たべましょう。", "furigana": "", "highlight": true }
+            {
+              "kanji": "ええ、",
+              "furigana": ""
+            },
+            {
+              "kanji": "たべましょう。",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "হ্যাঁ, [[একসাথে খাই]]। (Polite)"
         }
@@ -27,7 +43,7 @@
     {
       "title": "いこうけい (Volitional Form) — Plain Suggestion",
       "meaning": "একসাথে কিছু করার প্রস্তাব (Plain)",
-      "note": "Polite いでしょう এর Plain রূপ। বন্ধুদের সাথে কথোপকথনে ব্যবহৃত হয়।",
+      "note": "Polite form ましょう-এর Plain (volitional) রূপ। বন্ধুদের সাথে কথোপকথনে ব্যবহৃত হয়।",
       "conjugation": {
         "Group 1 (い line → お line + う)": "いきます → いこう / のみます → のもう",
         "Group 2 (ます → よう)": "たべます → たべよう",
@@ -36,16 +52,32 @@
       "examples": [
         {
           "jpFuri": [
-            { "kanji": "いっしょに", "furigana": "" },
-            { "kanji": "ひるごはんを", "furigana": "" },
-            { "kanji": "たべない？", "furigana": "" }
+            {
+              "kanji": "いっしょに",
+              "furigana": ""
+            },
+            {
+              "kanji": "ひるごはんを",
+              "furigana": ""
+            },
+            {
+              "kanji": "たべない？",
+              "furigana": ""
+            }
           ],
           "bn": "একসাথে [[দুপুরের খাবার খাবি না]]?"
         },
         {
           "jpFuri": [
-            { "kanji": "ええ、", "furigana": "" },
-            { "kanji": "たべよう。", "furigana": "", "highlight": true }
+            {
+              "kanji": "ええ、",
+              "furigana": ""
+            },
+            {
+              "kanji": "たべよう。",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "হ্যাঁ, [[একসাথে খাই]]। (Plain)"
         }
@@ -58,15 +90,27 @@
           "examples": [
             {
               "jpFuri": [
-                { "kanji": "Polite:", "furigana": "" },
-                { "kanji": "いっしょに たべましょう।", "furigana": "" }
+                {
+                  "kanji": "Polite:",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "いっしょに たべましょう।",
+                  "furigana": ""
+                }
               ],
               "bn": "Polite ভাষায়"
             },
             {
               "jpFuri": [
-                { "kanji": "Plain:", "furigana": "" },
-                { "kanji": "いっしょに たべよう。", "furigana": "" }
+                {
+                  "kanji": "Plain:",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "いっしょに たべよう。",
+                  "furigana": ""
+                }
               ],
               "bn": "Plain ভাষায়"
             }
@@ -81,15 +125,28 @@
       "examples": [
         {
           "jpFuri": [
-            { "kanji": "ちょっと", "furigana": "" },
-            { "kanji": "やすまない？", "furigana": "" }
+            {
+              "kanji": "ちょっと",
+              "furigana": ""
+            },
+            {
+              "kanji": "やすまない？",
+              "furigana": ""
+            }
           ],
           "bn": "একটু [[বিশ্রাম নেবি না]]?"
         },
         {
           "jpFuri": [
-            { "kanji": "うん、", "furigana": "" },
-            { "kanji": "やすもう。", "furigana": "", "highlight": true }
+            {
+              "kanji": "うん、",
+              "furigana": ""
+            },
+            {
+              "kanji": "やすもう。",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "হ্যাঁ, [[বিশ্রাম নিই]]। → ⓐ やすもう"
         }
@@ -99,26 +156,46 @@
     {
       "title": "いこうけい + とおもいます / とおもっています",
       "meaning": "কোনো কিছু করার সিদ্ধান্ত/ইচ্ছা প্রকাশ",
-      "note": "とおমি = আমার সিদ্ধান্ত / とおモッテ = অন্যের সিদ্ধান্ত",
+      "note": "とおもいます = আমার সিদ্ধান্ত/ইচ্ছা, とおもっています = অন্যের সিদ্ধান্ত/ইচ্ছা",
       "examples": [
         {
           "jpFuri": [
-            { "kanji": "にほんへ", "furigana": "" },
-            { "kanji": "いこう", "furigana": "" },
-            { "kanji": "とおもいます。", "furigana": "", "highlight": true }
+            {
+              "kanji": "にほんへ",
+              "furigana": ""
+            },
+            {
+              "kanji": "いこう",
+              "furigana": ""
+            },
+            {
+              "kanji": "とおもいます。",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "জাপানে [[যাওয়ার সিদ্ধান্ত নিয়েছি]]। (আমার সিদ্ধান্ত)"
         },
         {
           "jpFuri": [
-            { "kanji": "かれは", "furigana": "" },
-            { "kanji": "けっこんしよう", "furigana": "" },
-            { "kanji": "とおもっています。", "furigana": "", "highlight": true }
+            {
+              "kanji": "かれは",
+              "furigana": ""
+            },
+            {
+              "kanji": "けっこんしよう",
+              "furigana": ""
+            },
+            {
+              "kanji": "とおもっています。",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "সে [[বিয়ে করার সিদ্ধান্ত নিয়েছে]]। (অন্যের সিদ্ধান্ত)"
         }
       ],
-      "effect": "とおもいます = নিজের সিদ্ধান্ত / とおもっています = অন্যের সিদ্ধান্ত। いこうけい এর পর বসে।",
+      "effect": "とおもいます = নিজের সিদ্ধান্ত বা ইচ্ছা / とおもっています = অন্যের সিদ্ধান্ত বা ইচ্ছা। いこうけい এর পর বসে।",
       "usages": [
         {
           "name": "とおもいます vs とおもっています",
@@ -126,17 +203,35 @@
           "examples": [
             {
               "jpFuri": [
-                { "kanji": "わたしは", "furigana": "" },
-                { "kanji": "いく", "furigana": "" },
-                { "kanji": "とおもいます。", "furigana": "" }
+                {
+                  "kanji": "わたしは",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "いく",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "とおもいます。",
+                  "furigana": ""
+                }
               ],
               "bn": "আমি [[যাব]] বলে ভাবছি।"
             },
             {
               "jpFuri": [
-                { "kanji": "かれは", "furigana": "" },
-                { "kanji": "いく", "furigana": "" },
-                { "kanji": "とおもっています。", "furigana": "" }
+                {
+                  "kanji": "かれは",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "いく",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "とおもっています。",
+                  "furigana": ""
+                }
               ],
               "bn": "সে [[যাব]] বলে ভাবছে।"
             }
@@ -151,21 +246,37 @@
       "examples": [
         {
           "jpFuri": [
-            { "kanji": "しゅうまつは", "furigana": "" },
-            { "kanji": "うみへ", "furigana": "" },
-            { "kanji": "いこう", "furigana": "" },
-            { "kanji": "と( )。", "furigana": "" }
+            {
+              "kanji": "しゅうまつは",
+              "furigana": ""
+            },
+            {
+              "kanji": "うみへ",
+              "furigana": ""
+            },
+            {
+              "kanji": "いこう",
+              "furigana": ""
+            },
+            {
+              "kanji": "と( )。",
+              "furigana": ""
+            }
           ],
-          "bn": "শেষ সপ্তাহে সমুদ্রে [[যাওয়ার]] ( )।"
+          "bn": "সপ্তাহান্তে সমুদ্রে [[যাওয়ার]] ( )।"
         },
         {
           "jpFuri": [
-            { "kanji": "おもっています", "furigana": "", "highlight": true }
+            {
+              "kanji": "おもっています",
+              "furigana": "",
+              "highlight": true
+            }
           ],
-          "bn": "ⓑ [[তিনি বলেছেন যাবেন]]।"
+          "bn": "ⓑ [[তিনি যাওয়ার কথা ভাবছেন]]।"
         }
       ],
-      "effect": "Quiz: しゅうまつ = শেষ সপ্তাহ। おもっています = অন্যের সিদ্ধান্ত।"
+      "effect": "Quiz: しゅうまつ = সপ্তাহান্ত। おもっています = অন্যের সিদ্ধান্ত বা ইচ্ছা।"
     },
     {
       "title": "つもりです (Intention)",
@@ -174,20 +285,49 @@
       "examples": [
         {
           "jpFuri": [
-            { "kanji": "しょうらい", "furigana": "" },
-            { "kanji": "おかねもちに", "furigana": "" },
-            { "kanji": "なる", "furigana": "" },
-            { "kanji": "つもりです。", "furigana": "", "highlight": true }
+            {
+              "kanji": "しょうらい",
+              "furigana": ""
+            },
+            {
+              "kanji": "おかねもちに",
+              "furigana": ""
+            },
+            {
+              "kanji": "なる",
+              "furigana": ""
+            },
+            {
+              "kanji": "つもりです。",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "আমার ভবিষ্যতে [[ধনী হওয়ার ইচ্ছা]]।"
         },
         {
           "jpFuri": [
-            { "kanji": "しょうらい", "furigana": "" },
-            { "kanji": "びんぼうな", "furigana": "" },
-            { "kanji": "ひとに", "furigana": "" },
-            { "kanji": "ならない", "furigana": "" },
-            { "kanji": "つもりです。", "furigana": "", "highlight": true }
+            {
+              "kanji": "しょうらい",
+              "furigana": ""
+            },
+            {
+              "kanji": "びんぼうな",
+              "furigana": ""
+            },
+            {
+              "kanji": "ひとに",
+              "furigana": ""
+            },
+            {
+              "kanji": "ならない",
+              "furigana": ""
+            },
+            {
+              "kanji": "つもりです。",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "আমার ভবিষ্যতে [[গরিব না হওয়ার ইচ্ছা]]।"
         }
@@ -200,15 +340,27 @@
           "examples": [
             {
               "jpFuri": [
-                { "kanji": "いく", "furigana": "" },
-                { "kanji": "つもりです。", "furigana": "" }
+                {
+                  "kanji": "いく",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "つもりです。",
+                  "furigana": ""
+                }
               ],
               "bn": "[[যাওয়ার]] ইচ্ছা আছে।"
             },
             {
               "jpFuri": [
-                { "kanji": "いかない", "furigana": "" },
-                { "kanji": "つもりです。", "furigana": "" }
+                {
+                  "kanji": "いかない",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "つもりです。",
+                  "furigana": ""
+                }
               ],
               "bn": "[[না যাওয়ার]] ইচ্ছা আছে।"
             }
@@ -220,8 +372,14 @@
           "examples": [
             {
               "jpFuri": [
-                { "kanji": "けっこんの", "furigana": "" },
-                { "kanji": "つもりです。", "furigana": "" }
+                {
+                  "kanji": "けっこんの",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "つもりです。",
+                  "furigana": ""
+                }
               ],
               "bn": "[[বিয়ের]] ইচ্ছা আছে।"
             }
@@ -236,16 +394,32 @@
       "examples": [
         {
           "jpFuri": [
-            { "kanji": "らいげつ", "furigana": "" },
-            { "kanji": "くるまを", "furigana": "" },
-            { "kanji": "( )", "furigana": "" },
-            { "kanji": "つもりです。", "furigana": "" }
+            {
+              "kanji": "らいげつ",
+              "furigana": ""
+            },
+            {
+              "kanji": "くるまを",
+              "furigana": ""
+            },
+            {
+              "kanji": "( )",
+              "furigana": ""
+            },
+            {
+              "kanji": "つもりです。",
+              "furigana": ""
+            }
           ],
           "bn": "আগামী মাসে [[গাড়ি]] ( ) ইচ্ছা।"
         },
         {
           "jpFuri": [
-            { "kanji": "かう", "furigana": "", "highlight": true }
+            {
+              "kanji": "かう",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "ⓑ [[কেনার]]। → つもり এর আগে Dictionary form বসে।"
         }
@@ -259,17 +433,37 @@
       "examples": [
         {
           "jpFuri": [
-            { "kanji": "にほんへ", "furigana": "" },
-            { "kanji": "いく", "furigana": "" },
-            { "kanji": "よていがあります。", "furigana": "", "highlight": true }
+            {
+              "kanji": "にほんへ",
+              "furigana": ""
+            },
+            {
+              "kanji": "いく",
+              "furigana": ""
+            },
+            {
+              "kanji": "よていがあります。",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "জাপানে [[যাওয়ার সিডিউল আছে]]।"
         },
         {
           "jpFuri": [
-            { "kanji": "こんばんから", "furigana": "" },
-            { "kanji": "りょこうの", "furigana": "" },
-            { "kanji": "よていです。", "furigana": "", "highlight": true }
+            {
+              "kanji": "こんばんから",
+              "furigana": ""
+            },
+            {
+              "kanji": "りょこうの",
+              "furigana": ""
+            },
+            {
+              "kanji": "よていです。",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "আজ রাত থেকে [[ভ্রমণের পরিকল্পনা আছে]]।"
         }
@@ -282,15 +476,27 @@
           "examples": [
             {
               "jpFuri": [
-                { "kanji": "いく", "furigana": "" },
-                { "kanji": "よてい", "furigana": "" }
+                {
+                  "kanji": "いく",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "よてい",
+                  "furigana": ""
+                }
               ],
               "bn": "[[যাওয়ার]] সিডিউল"
             },
             {
               "jpFuri": [
-                { "kanji": "りょこうの", "furigana": "" },
-                { "kanji": "よてい", "furigana": "" }
+                {
+                  "kanji": "りょこうの",
+                  "furigana": ""
+                },
+                {
+                  "kanji": "よてい",
+                  "furigana": ""
+                }
               ],
               "bn": "[[ভ্রমণের]] পরিকল্পনা"
             }
@@ -305,16 +511,32 @@
       "examples": [
         {
           "jpFuri": [
-            { "kanji": "つの", "furigana": "" },
-            { "kanji": "おわりに", "furigana": "" },
-            { "kanji": "ドイツへ", "furigana": "" },
-            { "kanji": "( )。", "furigana": "" }
+            {
+              "kanji": "つの",
+              "furigana": ""
+            },
+            {
+              "kanji": "おわりに",
+              "furigana": ""
+            },
+            {
+              "kanji": "ドイツへ",
+              "furigana": ""
+            },
+            {
+              "kanji": "( )。",
+              "furigana": ""
+            }
           ],
-          "bn": "৪টির শেষে [[জার্মানি]] ( )।"
+          "bn": "মাসের শেষে [[জার্মানি]] ( )।"
         },
         {
           "jpFuri": [
-            { "kanji": "しゅっちょうする", "furigana": "", "highlight": true }
+            {
+              "kanji": "しゅっちょうする",
+              "furigana": "",
+              "highlight": true
+            }
           ],
           "bn": "ⓐ [[ব্যবসায়িক ভ্রমণ]]। → する (Dictionary form)।"
         }
