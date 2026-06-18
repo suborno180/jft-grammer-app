@@ -580,5 +580,51 @@
 
     })();
   </script>
+
+  <!-- Zoom Script (Ctrl+Scroll / Ctrl+/-) -->
+  <script>
+    (function () {
+      var zoomLevel = 1;
+      var minZoom = 0.5;
+      var maxZoom = 2;
+      var zoomStep = 0.1;
+      var app = document.getElementById('app');
+
+      function applyZoom() {
+        app.style.transform = 'scale(' + zoomLevel + ')';
+        app.style.transformOrigin = 'top center';
+      }
+
+      // Ctrl + Mouse Wheel
+      document.addEventListener('wheel', function (e) {
+        if (e.ctrlKey) {
+          e.preventDefault();
+          if (e.deltaY < 0) {
+            zoomLevel = Math.min(maxZoom, zoomLevel + zoomStep);
+          } else {
+            zoomLevel = Math.max(minZoom, zoomLevel - zoomStep);
+          }
+          applyZoom();
+        }
+      }, { passive: false });
+
+      // Ctrl + Plus / Minus
+      document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && (e.key === '+' || e.key === '=')) {
+          e.preventDefault();
+          zoomLevel = Math.min(maxZoom, zoomLevel + zoomStep);
+          applyZoom();
+        } else if (e.ctrlKey && e.key === '-') {
+          e.preventDefault();
+          zoomLevel = Math.max(minZoom, zoomLevel - zoomStep);
+          applyZoom();
+        } else if (e.ctrlKey && e.key === '0') {
+          e.preventDefault();
+          zoomLevel = 1;
+          applyZoom();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
