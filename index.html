@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn" class="scroll-smooth">
+<html lang="bn">
 
 <head>
   <meta charset="UTF-8">
@@ -67,7 +67,7 @@
   </script>
   <style>
     * { -webkit-tap-highlight-color: transparent; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { -webkit-text-size-adjust: 100%; }
     body { font-family: 'Inter', sans-serif; overscroll-behavior-y: contain; }
     .notebook-lines {
       background-image: repeating-linear-gradient(transparent, transparent 30px, rgba(200,190,175,0.35) 30px, rgba(200,190,175,0.35) 31px);
@@ -500,7 +500,7 @@
                 var rect = el.getBoundingClientRect();
                 var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 var centerOffset = (window.innerHeight / 2) - (rect.height / 2);
-                window.scrollTo({ top: rect.top + scrollTop - centerOffset, behavior: 'smooth' });
+                window.scrollTo({ top: rect.top + scrollTop - centerOffset });
                 skipScrollSpyFlash = true;
                 el.classList.remove('grammar-focus-flash');
                 void el.offsetWidth;
