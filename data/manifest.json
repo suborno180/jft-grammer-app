@@ -2,6 +2,7 @@
   "lessons": [
     { "id": "lesson-26", "file": "lesson-26.json", "label": "Lesson 26" },
     { "id": "lesson-27", "file": "lesson-27.json", "label": "Lesson 27" },
-    { "id": "lesson-28", "file": "lesson-28.json", "label": "Lesson 28" }
+    { "id": "lesson-28", "file": "lesson-28.json", "label": "Lesson 28" },
+    { "id": "lesson-29", "file": "lesson-29.json", "label": "Lesson 29" }
   ]
 }
