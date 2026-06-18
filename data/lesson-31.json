@@ -1,0 +1,325 @@
+{
+  "lesson": "Lesson 31",
+  "items": [
+    {
+      "title": "ましょう (Polite Suggestion) — N5 Review",
+      "meaning": "একসাথে কিছু করার প্রস্তাব (Polite)",
+      "note": "N5 Lesson 6 এ শেখা। ましょう হলো Polite form, いこうけい হলো Plain form।",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "いっしょに", "furigana": "" },
+            { "kanji": "ひるごはんを", "furigana": "" },
+            { "kanji": "たべませんか。", "furigana": "" }
+          ],
+          "bn": "একসাথে [[দুপুরের খাবার খাবেন কি]]?"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "ええ、", "furigana": "" },
+            { "kanji": "たべましょう。", "furigana": "", "highlight": true }
+          ],
+          "bn": "হ্যাঁ, [[একসাথে খাই]]। (Polite)"
+        }
+      ],
+      "effect": "ましょう — Polite ভাষায় 'let's do' বোঝায়। ませんか (negative question) দিয়ে সুন্দরভাবে প্রস্তাব করা হয়।"
+    },
+    {
+      "title": "いこうけい (Volitional Form) — Plain Suggestion",
+      "meaning": "একসাথে কিছু করার প্রস্তাব (Plain)",
+      "note": "Polite いでしょう এর Plain রূপ। বন্ধুদের সাথে কথোপকথনে ব্যবহৃত হয়।",
+      "conjugation": {
+        "Group 1 (い line → お line + う)": "いきます → いこう / のみます → のもう",
+        "Group 2 (ます → よう)": "たべます → たべよう",
+        "Group 3 (します → しよう / きます → こよう)": "べんきょうします → べんきょうしよう"
+      },
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "いっしょに", "furigana": "" },
+            { "kanji": "ひるごはんを", "furigana": "" },
+            { "kanji": "たべない？", "furigana": "" }
+          ],
+          "bn": "একসাথে [[দুপুরের খাবার খাবি না]]?"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "ええ、", "furigana": "" },
+            { "kanji": "たべよう。", "furigana": "", "highlight": true }
+          ],
+          "bn": "হ্যাঁ, [[একসাথে খাই]]। (Plain)"
+        }
+      ],
+      "effect": "いこうけい — Plain form এ 'let's do' বোঝায়। ましょう এর সরাসরি বিকল্প।",
+      "usages": [
+        {
+          "name": "Polite vs Plain",
+          "note": "Polite: たべましょう। / Plain: たべよう।",
+          "examples": [
+            {
+              "jpFuri": [
+                { "kanji": "Polite:", "furigana": "" },
+                { "kanji": "いっしょに たべましょう।", "furigana": "" }
+              ],
+              "bn": "Polite ভাষায়"
+            },
+            {
+              "jpFuri": [
+                { "kanji": "Plain:", "furigana": "" },
+                { "kanji": "いっしょに たべよう。", "furigana": "" }
+              ],
+              "bn": "Plain ভাষায়"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quiz: いこうけい",
+      "meaning": "いこうけい প্র্যাকটিস",
+      "note": "Quiz এর সঠিক উত্তর: ⓐ やすもう",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "ちょっと", "furigana": "" },
+            { "kanji": "やすまない？", "furigana": "" }
+          ],
+          "bn": "একটু [[বিশ্রাম নেবি না]]?"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "うん、", "furigana": "" },
+            { "kanji": "やすもう。", "furigana": "", "highlight": true }
+          ],
+          "bn": "হ্যাঁ, [[বিশ্রাম নিই]]। → ⓐ やすもう"
+        }
+      ],
+      "effect": "Quiz: やすむ (Group 1) → やすもう (volitional)।"
+    },
+    {
+      "title": "いこうけい + とおもいます / とおもっています",
+      "meaning": "কোনো কিছু করার সিদ্ধান্ত/ইচ্ছা প্রকাশ",
+      "note": "とおমি = আমার সিদ্ধান্ত / とおモッテ = অন্যের সিদ্ধান্ত",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "にほんへ", "furigana": "" },
+            { "kanji": "いこう", "furigana": "" },
+            { "kanji": "とおもいます。", "furigana": "", "highlight": true }
+          ],
+          "bn": "জাপানে [[যাওয়ার সিদ্ধান্ত নিয়েছি]]। (আমার সিদ্ধান্ত)"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "かれは", "furigana": "" },
+            { "kanji": "けっこんしよう", "furigana": "" },
+            { "kanji": "とおもっています。", "furigana": "", "highlight": true }
+          ],
+          "bn": "সে [[বিয়ে করার সিদ্ধান্ত নিয়েছে]]। (অন্যের সিদ্ধান্ত)"
+        }
+      ],
+      "effect": "とおもいます = নিজের সিদ্ধান্ত / とおもっています = অন্যের সিদ্ধান্ত। いこうけい এর পর বসে।",
+      "usages": [
+        {
+          "name": "とおもいます vs とおもっています",
+          "note": "とおもいます = নিজের সিদ্ধান্ত (1st person) / とおモッテ = অন্যের সিদ্ধান্ত (3rd person)",
+          "examples": [
+            {
+              "jpFuri": [
+                { "kanji": "わたしは", "furigana": "" },
+                { "kanji": "いく", "furigana": "" },
+                { "kanji": "とおもいます。", "furigana": "" }
+              ],
+              "bn": "আমি [[যাব]] বলে ভাবছি।"
+            },
+            {
+              "jpFuri": [
+                { "kanji": "かれは", "furigana": "" },
+                { "kanji": "いく", "furigana": "" },
+                { "kanji": "とおもっています。", "furigana": "" }
+              ],
+              "bn": "সে [[যাব]] বলে ভাবছে।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quiz: とおもいます",
+      "meaning": "とおもいます প্র্যাকটিস",
+      "note": "Quiz এর সঠিক উত্তর: ⓑ おもっています",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "しゅうまつは", "furigana": "" },
+            { "kanji": "うみへ", "furigana": "" },
+            { "kanji": "いこう", "furigana": "" },
+            { "kanji": "と( )。", "furigana": "" }
+          ],
+          "bn": "শেষ সপ্তাহে সমুদ্রে [[যাওয়ার]] ( )।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "おもっています", "furigana": "", "highlight": true }
+          ],
+          "bn": "ⓑ [[তিনি বলেছেন যাবেন]]।"
+        }
+      ],
+      "effect": "Quiz: しゅうまつ = শেষ সপ্তাহ। おもっています = অন্যের সিদ্ধান্ত।"
+    },
+    {
+      "title": "つもりです (Intention)",
+      "meaning": "কোনো কাজ করার ইচ্ছা",
+      "note": "Verb Dictionary Form / ない Form + つもり। Noun + の + つもり।",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "しょうらい", "furigana": "" },
+            { "kanji": "おかねもちに", "furigana": "" },
+            { "kanji": "なる", "furigana": "" },
+            { "kanji": "つもりです。", "furigana": "", "highlight": true }
+          ],
+          "bn": "আমার ভবিষ্যতে [[ধনী হওয়ার ইচ্ছা]]।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "しょうらい", "furigana": "" },
+            { "kanji": "びんぼうな", "furigana": "" },
+            { "kanji": "ひとに", "furigana": "" },
+            { "kanji": "ならない", "furigana": "" },
+            { "kanji": "つもりです。", "furigana": "", "highlight": true }
+          ],
+          "bn": "আমার ভবিষ্যতে [[গরিব না হওয়ার ইচ্ছা]]।"
+        }
+      ],
+      "effect": "つもりです — শক্ত ইচ্ছা বা সিদ্ধান্ত প্রকাশ করে। Dictionary form বা ない form এর পর বসে।",
+      "usages": [
+        {
+          "name": "Verb + つもりです / ない + つもりです",
+          "note": "ইতিবাচক: Dictionary form + つもり / নেতিবাচক: ない + つもり",
+          "examples": [
+            {
+              "jpFuri": [
+                { "kanji": "いく", "furigana": "" },
+                { "kanji": "つもりです。", "furigana": "" }
+              ],
+              "bn": "[[যাওয়ার]] ইচ্ছা আছে।"
+            },
+            {
+              "jpFuri": [
+                { "kanji": "いかない", "furigana": "" },
+                { "kanji": "つもりです。", "furigana": "" }
+              ],
+              "bn": "[[না যাওয়ার]] ইচ্ছা আছে।"
+            }
+          ]
+        },
+        {
+          "name": "Noun + の + つもりです",
+          "note": "Noun এর সাথে の যুক্ত করতে হবে",
+          "examples": [
+            {
+              "jpFuri": [
+                { "kanji": "けっこんの", "furigana": "" },
+                { "kanji": "つもりです。", "furigana": "" }
+              ],
+              "bn": "[[বিয়ের]] ইচ্ছা আছে।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quiz: つもりです",
+      "meaning": "つもりです প্র্যাকটিস",
+      "note": "Quiz এর সঠিক উত্তর: ⓑ かう (Dictionary form)",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "らいげつ", "furigana": "" },
+            { "kanji": "くるまを", "furigana": "" },
+            { "kanji": "( )", "furigana": "" },
+            { "kanji": "つもりです。", "furigana": "" }
+          ],
+          "bn": "আগামী মাসে [[গাড়ি]] ( ) ইচ্ছা।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "かう", "furigana": "", "highlight": true }
+          ],
+          "bn": "ⓑ [[কেনার]]। → つもり এর আগে Dictionary form বসে।"
+        }
+      ],
+      "effect": "Quiz: つもり এর আগে Dictionary form (かう) বসে, かいます না।"
+    },
+    {
+      "title": "よていです (Schedule / Plan)",
+      "meaning": "কোনো কাজের সিডিউল বা পরিকল্পনা",
+      "note": "Verb Dictionary Form + よてい / Noun + の + よてい",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "にほんへ", "furigana": "" },
+            { "kanji": "いく", "furigana": "" },
+            { "kanji": "よていがあります。", "furigana": "", "highlight": true }
+          ],
+          "bn": "জাপানে [[যাওয়ার সিডিউল আছে]]।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "こんばんから", "furigana": "" },
+            { "kanji": "りょこうの", "furigana": "" },
+            { "kanji": "よていです。", "furigana": "", "highlight": true }
+          ],
+          "bn": "আজ রাত থেকে [[ভ্রমণের পরিকল্পনা আছে]]।"
+        }
+      ],
+      "effect": "よていです — পূর্বনির্ধারিত সিডিউল বা পরিকল্পনা বোঝায়। Dictionary form / Noun + の এর পর বসে।",
+      "usages": [
+        {
+          "name": "Verb + よてい / Noun + の + よてい",
+          "note": "Dictionary form / Noun + の এর পর বসে",
+          "examples": [
+            {
+              "jpFuri": [
+                { "kanji": "いく", "furigana": "" },
+                { "kanji": "よてい", "furigana": "" }
+              ],
+              "bn": "[[যাওয়ার]] সিডিউল"
+            },
+            {
+              "jpFuri": [
+                { "kanji": "りょこうの", "furigana": "" },
+                { "kanji": "よてい", "furigana": "" }
+              ],
+              "bn": "[[ভ্রমণের]] পরিকল্পনা"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quiz: よていです",
+      "meaning": "よていです প্র্যাকটিস",
+      "note": "Quiz এর সঠিক উত্তর: ⓐ しゅっちょうする (Dictionary form)",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "つの", "furigana": "" },
+            { "kanji": "おわりに", "furigana": "" },
+            { "kanji": "ドイツへ", "furigana": "" },
+            { "kanji": "( )。", "furigana": "" }
+          ],
+          "bn": "৪টির শেষে [[জার্মানি]] ( )।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "しゅっちょうする", "furigana": "", "highlight": true }
+          ],
+          "bn": "ⓐ [[ব্যবসায়িক ভ্রমণ]]। → する (Dictionary form)।"
+        }
+      ],
+      "effect": "Quiz: おわりに = শেষে। しゅっちょうする = Dictionary form (よてい এর আগে)।"
+    }
+  ]
+}

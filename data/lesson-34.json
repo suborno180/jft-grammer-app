@@ -1,0 +1,259 @@
+{
+  "lesson": "Lesson 34",
+  "items": [
+    {
+      "title": "～とおりに (As / According to)",
+      "meaning": "মতো / বরাবর / অনুযায়ী / যেভাবে",
+      "note": "Verb た form / Noun + の এর পর とおりに বসে, তারপর Verb বসে।",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "せんせいが", "furigana": "" },
+            { "kanji": "かいた", "furigana": "" },
+            { "kanji": "とおりに、", "furigana": "", "highlight": true },
+            { "kanji": "かいて", "furigana": "" },
+            { "kanji": "ください。", "furigana": "" }
+          ],
+          "bn": "শিক্ষক [[যেভাবে লিখেছেন]] সেভাবে দয়া করে লিখুন।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "やじるしの", "furigana": "" },
+            { "kanji": "とおりに、", "furigana": "", "highlight": true },
+            { "kanji": "かみを", "furigana": "" },
+            { "kanji": "きって", "furigana": "" },
+            { "kanji": "ください。", "furigana": "" }
+          ],
+          "bn": "চিহ্ন [[বরাবর]] কাগজ কাটুন দয়া করে।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "せんの", "furigana": "" },
+            { "kanji": "とおりに、", "furigana": "", "highlight": true },
+            { "kanji": "きって", "furigana": "" },
+            { "kanji": "ください。", "furigana": "" }
+          ],
+          "bn": "লাইন [[বরাবর]] কাটুন দয়া করে।"
+        }
+      ],
+      "effect": "とおりに — 'যেমন' / 'অনুযায়ী' অর্থে ব্যবহৃত হয়। Verb た form / Noun + の এর পর বসে।",
+      "usages": [
+        {
+          "name": "Verb た form + とおりに / Noun + の + とおりに",
+          "note": "Verb এর た form বা Noun + の এর পর とおりに বসে",
+          "examples": [
+            {
+              "jpFuri": [
+                { "kanji": "おなじ", "furigana": "" },
+                { "kanji": "とおりに", "furigana": "" }
+              ],
+              "bn": "[[একইভাবে]]"
+            },
+            {
+              "jpFuri": [
+                { "kanji": "おもった", "furigana": "" },
+                { "kanji": "とおりに", "furigana": "" }
+              ],
+              "bn": "[[ভাবার মতোই]]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quiz: とおりに",
+      "meaning": "とおりに প্র্যাকটিস",
+      "note": "Quiz এর সঠিক উত্তর: ⓑ やった (た form)",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "かれが", "furigana": "" },
+            { "kanji": "( )", "furigana": "" },
+            { "kanji": "とおりに、", "furigana": "" },
+            { "kanji": "やって", "furigana": "" },
+            { "kanji": "ください。", "furigana": "" }
+          ],
+          "bn": "সে ( ) [[অনুযায়ী]] করুন।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "やった", "furigana": "", "highlight": true }
+          ],
+          "bn": "ⓑ [[করেছে]]। → た form + とおりに।"
+        }
+      ],
+      "effect": "Quiz: とおりに এর আগে Verb た form (やった) বসে।"
+    },
+    {
+      "title": "～あとで (After)",
+      "meaning": "কোনো কাজের পরে",
+      "note": "Verb た form / Noun + の এর পর あとで বসে, তারপর Verb বসে।",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "ごはんを", "furigana": "" },
+            { "kanji": "たべた", "furigana": "" },
+            { "kanji": "あとで、", "furigana": "", "highlight": true },
+            { "kanji": "テレビを", "furigana": "" },
+            { "kanji": "みます。", "furigana": "" }
+          ],
+          "bn": "খাবার [[খাওয়ার পর]] টিভি দেখব।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "N5を", "furigana": "" },
+            { "kanji": "べんきょうした", "furigana": "" },
+            { "kanji": "あとで、", "furigana": "", "highlight": true },
+            { "kanji": "にほんへ", "furigana": "" },
+            { "kanji": "アプリケーションを", "furigana": "" },
+            { "kanji": "します。", "furigana": "" }
+          ],
+          "bn": "N5 [[পড়ার পর]] জাপানে Application করব।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "りょこうの", "furigana": "" },
+            { "kanji": "あとで、", "furigana": "", "highlight": true },
+            { "kanji": "くにへ", "furigana": "" },
+            { "kanji": "かえります。", "furigana": "" }
+          ],
+          "bn": "ভ্রমণের [[পর]] দেশে ফিরে আসব।"
+        }
+      ],
+      "effect": "あとで — 'এর পর' অর্থে ব্যবহৃত হয়। Verb た form / Noun + の এর পর বসে।",
+      "usages": [
+        {
+          "name": "Verb た form + あとで / Noun + の + あとで",
+          "note": "Verb এর た form বা Noun + の এর পর あとで বসে",
+          "examples": [
+            {
+              "jpFuri": [
+                { "kanji": "がくこうの", "furigana": "" },
+                { "kanji": "あとで", "furigana": "" }
+              ],
+              "bn": "[[পড়াশোনার]] পর"
+            },
+            {
+              "jpFuri": [
+                { "kanji": "べんきょうした", "furigana": "" },
+                { "kanji": "あとで", "furigana": "" }
+              ],
+              "bn": "[[পড়ার]] পর"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quiz: あとで",
+      "meaning": "あとで প্র্যাকটিস",
+      "note": "Quiz এর সঠিক উত্তর: ⓑ あとで",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "しごとの", "furigana": "" },
+            { "kanji": "( )", "furigana": "" },
+            { "kanji": "のみに", "furigana": "" },
+            { "kanji": "いきませんか。", "furigana": "" }
+          ],
+          "bn": "কাজের ( ) [[পানীয়ে]] যাবেন না?"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "あとで", "furigana": "", "highlight": true }
+          ],
+          "bn": "ⓑ [[কাজের পর]]। → あとで + Verb।"
+        }
+      ],
+      "effect": "Quiz: しごと = কাজ। あとで = পরে (Verb た form / Noun + の এর পর)।"
+    },
+    {
+      "title": "て form + Verb / ないで + Verb (Concurrent Actions)",
+      "meaning": "একটি কাজ করে/না করে আরেকটি কাজ করা",
+      "note": "Verb て form + Verb₂ = কাজ করে আরেকটি কাজ। Verb ないで + Verb₂ = না করে আরেকটি কাজ।",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "しょうゆを", "furigana": "" },
+            { "kanji": "つけて", "furigana": "", "highlight": true },
+            { "kanji": "たべて", "furigana": "" },
+            { "kanji": "ください。", "furigana": "" }
+          ],
+          "bn": "সস [[মেশিয়ে]] খাবেন দয়া করে।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "しょうゆを", "furigana": "" },
+            { "kanji": "つけないで", "furigana": "", "highlight": true },
+            { "kanji": "たべて", "furigana": "" },
+            { "kanji": "ください。", "furigana": "" }
+          ],
+          "bn": "সস [[না মেশিয়ে]] খাবেন দয়া করে।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "にちようびは", "furigana": "" },
+            { "kanji": "どこも", "furigana": "" },
+            { "kanji": "いかないで、", "furigana": "", "highlight": true },
+            { "kanji": "うちで", "furigana": "" },
+            { "kanji": "やすみます。", "furigana": "" }
+          ],
+          "bn": "রবিবার কোথাও [[না গিয়ে]] বাড়িতে বিশ্রাম নেব।"
+        }
+      ],
+      "effect": "て form + Verb = কাজ করে আরেকটি কাজ। ないで + Verb = না করে আরেকটি কাজ।",
+      "usages": [
+        {
+          "name": "Verb て form + Verb₂",
+          "note": "একটি কাজ করে আরেকটি কাজ করা",
+          "examples": [
+            {
+              "jpFuri": [
+                { "kanji": "てを", "furigana": "" },
+                { "kanji": "あらって", "furigana": "" },
+                { "kanji": "たべます。", "furigana": "" }
+              ],
+              "bn": "হাত [[ধুয়ে]] খাব।"
+            }
+          ]
+        },
+        {
+          "name": "Verb ないで + Verb₂",
+          "note": "একটি কাজ না করে আরেকটি কাজ করা",
+          "examples": [
+            {
+              "jpFuri": [
+                { "kanji": "はを", "furigana": "" },
+                { "kanji": "みがかないで", "furigana": "" },
+                { "kanji": "ねます。", "furigana": "" }
+              ],
+              "bn": "দাঁত [[না মাজিয়ে]] ঘুমাব।"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Quiz: て form + ないで",
+      "meaning": "て form / ない quiz",
+      "note": "Quiz এর সঠিক উত্তর বের করো",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "かさを", "furigana": "" },
+            { "kanji": "( )", "furigana": "" },
+            { "kanji": "でかけます。", "furigana": "" }
+          ],
+          "bn": "ছাতা [[করে]] বাইরে যাব।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "もって", "furigana": "", "highlight": true }
+          ],
+          "bn": "[[ধরে]]। → て form (もつ → もって)।"
+        }
+      ],
+      "effect": "Quiz: もつ (持つ) = ধরা। て form: もって। ছাতা ধরে বাইরে যাওয়া।"
+    }
+  ]
+}

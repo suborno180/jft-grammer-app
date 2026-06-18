@@ -4,6 +4,8 @@
     { "id": "lesson-27", "file": "lesson-27.json", "label": "Lesson 27" },
     { "id": "lesson-28", "file": "lesson-28.json", "label": "Lesson 28" },
     { "id": "lesson-29", "file": "lesson-29.json", "label": "Lesson 29" },
-    { "id": "lesson-30", "file": "lesson-30.json", "label": "Lesson 30" }
+    { "id": "lesson-30", "file": "lesson-30.json", "label": "Lesson 30" },
+    { "id": "lesson-31", "file": "lesson-31.json", "label": "Lesson 31" },
+    { "id": "lesson-34", "file": "lesson-34.json", "label": "Lesson 34" }
   ]
 }
