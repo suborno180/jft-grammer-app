@@ -1,0 +1,200 @@
+{
+  "lesson": "Lesson 30",
+  "items": [
+    {
+      "title": "～て あります (Transitive Verb + Resultant State)",
+      "meaning": "কোনো কাজ ইচ্ছাকৃতভাবে করা হয়েছে এবং তার ফলাফল বর্তমানে বিদ্যমান আছে",
+      "note": "Intransitive Verb এর ক্ষেত্রে ～て います এবং Transitive Verb এর ক্ষেত্রে ～て あります ব্যবহৃত হয়",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "つくえの", "furigana": "" },
+            { "kanji": "うえに", "furigana": "" },
+            { "kanji": "レポートを", "furigana": "" },
+            { "kanji": "かいて あります", "furigana": "", "highlight": true }
+          ],
+          "bn": "ডেস্কের উপর [[রিপোর্টটি লেখা আছে]]।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "かべに", "furigana": "" },
+            { "kanji": "ポスターが", "furigana": "" },
+            { "kanji": "はって あります", "furigana": "", "highlight": true }
+          ],
+          "bn": "দেয়ালে [[পোস্টার লাগানো আছে]]। [Object: ポスターが]"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "ポスターは", "furigana": "" },
+            { "kanji": "かべに", "furigana": "" },
+            { "kanji": "はって あります", "furigana": "", "highlight": true }
+          ],
+          "bn": "পোস্টার [[দেয়ালে লাগানো আছে]]। [Subject: ポスターは]"
+        }
+      ],
+      "effect": "～て あります — Transitive Verb (他動詞) এর সাথে ব্যবহৃত হয়। ইচ্ছাকৃতভাবে কাজ করা হয়েছে এবং তার ফলাফল এখনো আছে।"
+    },
+    {
+      "title": "Intransitive vs Transitive Verb + あります",
+      "meaning": "Intransitive ও Transitive Verb এর পার্থক্য বোঝা",
+      "note": "সঠিক বাক্য গঠনের জন্য Verb এর ধরন জানা জরুরি",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "ドアが", "furigana": "" },
+            { "kanji": "しまって います", "furigana": "", "highlight": true }
+          ],
+          "bn": "দরজা [[বন্ধ আছে]]। → Intransitive Verb (しまる)"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "ドアが", "furigana": "" },
+            { "kanji": "しめて あります", "furigana": "", "highlight": true }
+          ],
+          "bn": "দরজা [[বন্ধ করে রাখা হয়েছে]]। → Transitive Verb (しめる)"
+        }
+      ],
+      "effect": "⚠️ ভুল: ドアが しまって あります। — Intransitive Verb এর সাথে ～てあります ব্যবহার করা যায় না।"
+    },
+    {
+      "title": "～て おきます (Do in Advance)",
+      "meaning": "ভবিষ্যতের জন্য আগে থেকে কোনো কাজ করে রাখা",
+      "note": "প্রস্তুতি নেওয়া বা পরবর্তীতে সুবিধার জন্য কিছু করে রাখা বোঝায়",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "こどもが", "furigana": "" },
+            { "kanji": "うまれる", "furigana": "" },
+            { "kanji": "まえに", "furigana": "" },
+            { "kanji": "なまえを", "furigana": "" },
+            { "kanji": "きめて おきます", "furigana": "", "highlight": true }
+          ],
+          "bn": "বাচ্চা [[জন্মের আগে নাম ঠিক করে রাখব]]।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "にほんへ", "furigana": "" },
+            { "kanji": "いきたいです。", "furigana": "" },
+            { "kanji": "それで、", "furigana": "" },
+            { "kanji": "かいものして おきました。", "furigana": "", "highlight": true }
+          ],
+          "bn": "জাপানে যেতে চাই। তাই [[কেনাকাটা করে রেখেছি]]।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "パソコンを", "furigana": "" },
+            { "kanji": "つかったら、", "furigana": "" },
+            { "kanji": "もとの", "furigana": "" },
+            { "kanji": "ところに", "furigana": "" },
+            { "kanji": "もどして おいて ください。", "furigana": "", "highlight": true }
+          ],
+          "bn": "কম্পিউটার ব্যবহারের পর [[আগের জায়গায় ফিরিয়ে রেখে দিন]]।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "パソコンを", "furigana": "" },
+            { "kanji": "つかったら、", "furigana": "" },
+            { "kanji": "つくえの", "furigana": "" },
+            { "kanji": "うえに", "furigana": "" },
+            { "kanji": "おいて おきます。", "furigana": "", "highlight": true }
+          ],
+          "bn": "কম্পিউটার [[ব্যবহার করে ডেস্কের উপর রেখে দিন]]।"
+        }
+      ],
+      "effect": "～て おきます — ভবিষ্যতের জন্য আগে থেকে কাজ করে রাখা বা প্রস্তুতি নেওয়া বোঝায়।"
+    },
+    {
+      "title": "ておいて → とおいて (Shortly Speaking)",
+      "meaning": "কথ্য ভাষায় ておいて সংক্ষিপ্ত হয়ে とおいて হয়",
+      "note": "জাপানিরা দৈনন্দিন কথোপকথনে প্রায়ই এই রূপান্তর ব্যবহার করে",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "パソコンを", "furigana": "" },
+            { "kanji": "つかったら、", "furigana": "" },
+            { "kanji": "つくえの", "furigana": "" },
+            { "kanji": "うえに", "furigana": "" },
+            { "kanji": "おいて おいて ください。", "furigana": "", "highlight": true }
+          ],
+          "bn": "কম্পিউটার [[ডেস্কের উপর রেখে দিন]]।"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "パソコンを", "furigana": "" },
+            { "kanji": "つかったら、", "furigana": "" },
+            { "kanji": "つくえの", "furigana": "" },
+            { "kanji": "うえに", "furigana": "" },
+            { "kanji": "おいといて ください。", "furigana": "", "highlight": true }
+          ],
+          "bn": "কম্পিউটার [[ডেস্কের উপর রেখে দিন]]। (সংক্ষিপ্ত রূপ)"
+        }
+      ],
+      "effect": "ておいて → とおいて: কথ্য ভাষার সংক্ষিপ্ত রূপ। অর্থ একই থাকে। てお → と হয়।"
+    },
+    {
+      "title": "まだ (Still / Yet)",
+      "meaning": "এখনও",
+      "note": "N5 তে নেতিবাচক বাক্যে, N4 তে ইতিবাচক বাক্যেও ব্যবহৃত হয়",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "もう", "furigana": "" },
+            { "kanji": "レポートを", "furigana": "" },
+            { "kanji": "おくりましたか。", "furigana": "" }
+          ],
+          "bn": "ইতিমধ্যে [[রিপোর্ট পাঠিয়েছেন]] কি?"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "いいえ、", "furigana": "" },
+            { "kanji": "まだ", "furigana": "", "highlight": true },
+            { "kanji": "おくっていません。", "furigana": "" }
+          ],
+          "bn": "না, [[এখনও পাঠাইনি]]। (N5 — নেতিবাচক)"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "まだ", "furigana": "", "highlight": true },
+            { "kanji": "つかって", "furigana": "" },
+            { "kanji": "いますから、", "furigana": "" },
+            { "kanji": "このままに", "furigana": "" },
+            { "kanji": "して", "furigana": "" },
+            { "kanji": "おいて", "furigana": "" },
+            { "kanji": "ください。", "furigana": "" }
+          ],
+          "bn": "[[এখনও ব্যবহার করছি]] তাই, এভাবেই রেখে দিন। (N4 — ইতিবাচক)"
+        }
+      ],
+      "effect": "まだ — 'এখনও' অর্থে ব্যবহৃত হয়। N5 তে নেতিবাচক, N4 তে ইতিবাচক বাক্যেও ব্যবহার করা যায়।"
+    },
+    {
+      "title": "NOUN + とか (Like / Things Like)",
+      "meaning": "ইত্যাদি, যেমন... এর মতো",
+      "note": "や এর মতো তালিকা দেওয়ার জন্য, তবে বেশি কথোপকথনমূলক",
+      "examples": [
+        {
+          "jpFuri": [
+            { "kanji": "どんな", "furigana": "" },
+            { "kanji": "どうぶつが", "furigana": "" },
+            { "kanji": "すきですか。", "furigana": "" }
+          ],
+          "bn": "কোন ধরনের [[প্রাণী পছন্দ]]?"
+        },
+        {
+          "jpFuri": [
+            { "kanji": "そうですね。", "furigana": "" },
+            { "kanji": "ねこ", "furigana": "" },
+            { "kanji": "とか", "furigana": "", "highlight": true },
+            { "kanji": "ぞう", "furigana": "" },
+            { "kanji": "とか", "furigana": "", "highlight": true },
+            { "kanji": "カンガルー", "furigana": "" },
+            { "kanji": "とか", "furigana": "", "highlight": true },
+            { "kanji": "..........", "furigana": "" }
+          ],
+          "bn": "আচ্ছা, [[বিড়াল]], [[হাতি]], [[ক্যাঙারু]]...... ইত্যাদি।"
+        }
+      ],
+      "effect": "NOUN + とか — や এর মতো তালিকা করার জন্য, তবে আরো কথোপকথনমূলক।"
+    }
+  ]
+}
